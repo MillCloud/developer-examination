@@ -1,8 +1,8 @@
 /**
  * @desc 对给定数组去重，对于引用类型，做或不做深层次比较都可以
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- * @param {Array<any>} array
- * @returns 去重后的数组
+ * @param {Array<string | number | boolean | undefined | null | { [propName: string]: any; } | any[]>} array
+ * @returns {Array<string | number | boolean | undefined | null | { [propName: string]: any; } | any[]>} 去重后的数组
  */
 const arrayDeduplication = (array) => {};
 

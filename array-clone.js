@@ -1,8 +1,8 @@
 /**
  * @desc 对给定数组，返回这个数组的浅拷贝或深拷贝
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- * @param {Array<any>} array
- * @returns 传入数组的浅拷贝或深拷贝
+ * @param {Array<string | number | boolean | undefined | null | { [propName: string]: any; } | any[]>} array
+ * @returns {Array<string | number | boolean | undefined | null | { [propName: string]: any; } | any[]>} 传入数组的浅拷贝或深拷贝
  */
 const arrayClone = (array) => {};
 

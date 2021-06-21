@@ -1,7 +1,7 @@
 /**
  * @desc 对给定对象，返回这个对象的浅拷贝或深拷贝
  * @desc 对象键只可能是 String，值只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- * @param {Array<any>} array
+ * @param {{ [propName: string]: string | number | boolean | undefined | null | { [propName: string]: any; } | any[] }} array
  * @returns 传入对象的浅拷贝或深拷贝
  */
 const objectClone = (object) => {};

@@ -1,8 +1,8 @@
 /**
  * @desc 对给定数组元素求和
  * @desc 数组元素只可能是 Number
- * @param {Array<any>} array
- * @returns 传入数组的浅拷贝
+ * @param {Array<number>} array
+ * @returns {number} 传入数组的元素之和
  */
 const arraySum = (array) => {};
 
