@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import reactJsx from "vite-react-jsx";
-import imp from "vite-plugin-imp";
+import styleImport from "vite-plugin-style-import";
+import tsconfigPaths from "vite-tsconfig-paths";
 import WindiCSS from "vite-plugin-windicss";
 
 // https://vitejs.dev/config/
@@ -9,11 +10,15 @@ export default defineConfig({
   plugins: [
     reactRefresh(),
     reactJsx(),
-    imp({
-      libList: [
+    tsconfigPaths(),
+    styleImport({
+      libs: [
         {
-          libName: "antd",
-          style: (name) => `antd/lib/${name}/style/index.less`,
+          libraryName: "antd",
+          esModule: true,
+          resolveStyle: (name) => {
+            return `antd/es/${name}/style/index`;
+          },
         },
       ],
     }),
@@ -26,4 +31,5 @@ export default defineConfig({
       },
     },
   },
+  resolve: {},
 });
