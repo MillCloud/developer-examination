@@ -1,13 +1,3 @@
----
-title: "机试"
-html:
-  offline: false
-  toc: true
-export_on_save:
-  html: true
-  prince: true
----
-
 # 机试
 
 ## 目的
