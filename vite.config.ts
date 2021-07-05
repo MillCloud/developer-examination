@@ -1,28 +1,32 @@
-import { defineConfig } from "vite";
-import reactRefresh from "@vitejs/plugin-react-refresh";
-import reactJsx from "vite-react-jsx";
-import styleImport from "vite-plugin-style-import";
-import tsconfigPaths from "vite-tsconfig-paths";
-import WindiCSS from "vite-plugin-windicss";
+import { defineConfig } from 'vite';
+import Vue from '@vitejs/plugin-vue';
+import ReactRefresh from '@vitejs/plugin-react-refresh';
+import ReactJsx from 'vite-react-jsx';
+import StyleImport from 'vite-plugin-style-import';
+import TsconfigPaths from 'vite-tsconfig-paths';
+import WindiCSS from 'vite-plugin-windicss';
+import Pages from 'vite-plugin-pages';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    reactRefresh(),
-    reactJsx(),
-    tsconfigPaths(),
-    styleImport({
+    Vue(),
+    ReactRefresh(),
+    ReactJsx(),
+    TsconfigPaths(),
+    WindiCSS(),
+    Pages({
+      react: true,
+    }),
+    StyleImport({
       libs: [
         {
-          libraryName: "antd",
+          libraryName: 'antd',
           esModule: true,
-          resolveStyle: (name) => {
-            return `antd/es/${name}/style/index`;
-          },
+          resolveStyle: (name) => `antd/es/${name}/style/index`,
         },
       ],
     }),
-    WindiCSS(),
   ],
   css: {
     preprocessorOptions: {
@@ -31,5 +35,4 @@ export default defineConfig({
       },
     },
   },
-  resolve: {},
 });
