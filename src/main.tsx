@@ -11,7 +11,7 @@ import 'virtual:windi.css';
 ReactDOM.render(
   <React.StrictMode>
     <ConfigProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Layout>{renderRoutes(routes)}</Layout>
       </BrowserRouter>
     </ConfigProvider>
