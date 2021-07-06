@@ -1,26 +1,9 @@
-import { memo } from 'react';
+import { memo, ReactNode } from 'react';
 import { Collapse, Typography, Button } from 'antd';
-import Markdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import Markdown from 'markdown-to-jsx';
 import { utils, demos } from '@/data';
 import { DownloadOutlined } from '@ant-design/icons';
 import fileSaver from 'file-saver';
-
-const markdownComponents = {
-  // @ts-ignore
-  code({ node, inline, className, children, ...props }) {
-    const match = /language-(\w+)/.exec(className || '');
-    return !inline && match ? (
-      <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
-        {String(children).replace(/\n$/, '')}
-      </SyntaxHighlighter>
-    ) : (
-      <code className={className} {...props}>
-        {children}
-      </code>
-    );
-  },
-};
 
 const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
@@ -49,8 +32,7 @@ const ComputerExamination = memo(() => (
               />
             }
           >
-            {/* @ts-ignore */}
-            <Markdown components={markdownComponents}>{`~~~javascript
+            <Markdown>{`~~~javascript
 ${util.content}
 ~~~`}</Markdown>
           </Panel>
