@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build:github": "tsc && vite build --base=https://millcloud.github.io/developer-examination/",
-    "build:gitee": "tsc && vite build --base=https://millcloud.gitee.io/developer-examination/",
+    "build": "tsc && vite build --base=/developer-examination/",
     "serve": "vite preview",
     "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
     "lint:script": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",

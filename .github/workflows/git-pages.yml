@@ -35,9 +35,9 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Build Github Pages
-        run: yarn build:github
+        run: yarn build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Git Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: git-pages
