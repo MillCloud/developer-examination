@@ -2,7 +2,6 @@ import { memo } from 'react';
 import { Collapse, Typography, Button } from 'antd';
 import Markdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { utils, demos } from '@/data';
 import { DownloadOutlined } from '@ant-design/icons';
 import fileSaver from 'file-saver';
@@ -12,12 +11,7 @@ const markdownComponents = {
   code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '');
     return !inline && match ? (
-      <SyntaxHighlighter
-        style={a11yDark}
-        language={match[1]}
-        PreTag="div"
-        {...props}
-      >
+      <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
     ) : (
