@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react';
 import { Layout as ALayout, Typography, Image, Row, Menu } from 'antd';
 import logoUrl from '@/assets/logo.png';
-import { useHistory, useLocation, Link } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const { Header, Content } = ALayout;
 
