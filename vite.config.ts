@@ -17,6 +17,7 @@ export default defineConfig({
     WindiCSS(),
     Pages({
       react: true,
+      importMode: 'async',
     }),
     StyleImport({
       libs: [
