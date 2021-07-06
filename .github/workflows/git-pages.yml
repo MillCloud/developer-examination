@@ -2,10 +2,8 @@
 name: docs
 
 on:
-  # 每当 push 到 git-pages 分支时触发部署
   push:
-    branches: [git-pages]
-  # 手动触发部署
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -15,16 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          # 选择要使用的 node 版本
           node-version: '14'
 
-      # 缓存 node_modules
       - name: Cache Dependencies
         uses: actions/cache@v2
         id: yarn-cache
@@ -35,18 +30,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      # 如果缓存没有命中，安装依赖
       - name: Install Dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
-      # 运行构建脚本
       - name: Build Git Pages
         run: yarn build
 
-      # 部署到 Github Pages
-      # 查看 workflow 的文档来获取更多信息
-      # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
@@ -55,7 +45,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 同步到 Gitee
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
         with:
@@ -64,7 +53,6 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
 
-      # 部署到 Gitee Pages
       # - name: Deploy to Gitee Pages
       #   uses: yanglbme/gitee-pages-action@main
       #   with:
