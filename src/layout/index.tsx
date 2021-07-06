@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react';
-import { Layout as ALayout, Typography, Image, Row, Menu } from 'antd';
+import { Layout as ALayout, Typography, Image, Row, Menu, BackTop } from 'antd';
 import logoUrl from '@/assets/logo.png';
 import { useHistory, useLocation } from 'react-router-dom';
 
@@ -55,6 +55,7 @@ const Layout = memo(({ children }) => {
         </Row>
       </Header>
       <Content style={{ marginTop: 64, padding: 50 }}>{children}</Content>
+      <BackTop />
     </ALayout>
   );
 });
