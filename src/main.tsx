@@ -8,8 +8,6 @@ import Layout from '@/layout';
 import 'ress';
 import 'virtual:windi.css';
 
-console.log('routes', routes);
-
 ReactDOM.render(
   <React.StrictMode>
     <ConfigProvider>

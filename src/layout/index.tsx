@@ -18,7 +18,6 @@ const routes = [
 
 const Layout = memo(({ children }) => {
   const location = useLocation();
-  console.log('location', location);
   const history = useHistory();
   const selectedKeys = useMemo(
     () =>
