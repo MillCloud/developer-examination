@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react';
 import { Layout as ALayout, Typography, Image, Row, Menu } from 'antd';
 import logoUrl from '@/assets/logo.png';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation, Link } from 'react-router-dom';
 
 const { Header, Content } = ALayout;
 
@@ -31,9 +31,16 @@ const Layout = memo(({ children }) => {
     <ALayout className="min-h-screen">
       <Header className="fixed z-1 w-full">
         <Row align="middle" className="h-full">
-          <Image src={logoUrl} />
+          <a
+            href="https://www.millcloud.cn"
+            className="flex flex-row items-center"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={logoUrl} preview={false} alt="MillCloud" />
+          </a>
           <Typography.Title level={3} className="!text-white !mb-0 mx-4">
-            开发测试
+            前端测试
           </Typography.Title>
           <Menu
             theme="dark"
