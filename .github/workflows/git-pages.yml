@@ -34,8 +34,8 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
-      - name: Build Git Pages
-        run: yarn build
+      - name: Build Github Pages
+        run: yarn build:github
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
@@ -44,19 +44,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        with:
-          source-repo: git@github.com:MillCloud/developer-examination.git
-          destination-repo: git@gitee.com:MillCloud/developer-examination.git
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
-
-      # - name: Deploy to Gitee Pages
-      #   uses: yanglbme/gitee-pages-action@main
-      #   with:
-      #     gitee-username: ModyQyW
-      #     gitee-password: ${{ secrets.GITEE_PASSWORD }}
-      #     gitee-repo: MillCloud/developer-examination
-      #     branch: git-pages
