@@ -49,7 +49,7 @@ const Layout = memo(({ children }) => {
               history.push(`/${key}`);
             }}
           >
-            <Menu.Item key="introduction">初衷</Menu.Item>
+            <Menu.Item key="introduction">说明</Menu.Item>
             <Menu.Item key="computer-examination">机试</Menu.Item>
           </Menu>
         </Row>
