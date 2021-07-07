@@ -28,7 +28,7 @@ const Layout = memo(({ children }) => {
   );
   return (
     <ALayout className="min-h-screen">
-      <Header className="fixed z-1 w-full">
+      <Header className="fixed z-1 w-full" style={{ padding: '0 24px' }}>
         <Row align="middle" className="h-full">
           <a
             href="https://www.millcloud.cn"
@@ -36,9 +36,14 @@ const Layout = memo(({ children }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={logoUrl} preview={false} alt="MillCloud" />
+            <Image
+              src={logoUrl}
+              preview={false}
+              alt="MillCloud"
+              className="w-20"
+            />
           </a>
-          <Typography.Title level={3} className="!text-white !mb-0 mx-4">
+          <Typography.Title level={5} className="!text-white !mb-0 mx-4">
             前端测试
           </Typography.Title>
           <Menu
@@ -54,7 +59,7 @@ const Layout = memo(({ children }) => {
           </Menu>
         </Row>
       </Header>
-      <Content style={{ marginTop: 64, padding: 50 }}>{children}</Content>
+      <Content style={{ marginTop: 64, padding: 24 }}>{children}</Content>
       <BackTop />
     </ALayout>
   );
