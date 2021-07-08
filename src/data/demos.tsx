@@ -20,11 +20,20 @@ export const demos = [
           >
             fetch
           </Link>{' '}
-          获取 Github Vue / React Topics 的仓库并显示作者、仓库名、Star 和
-          Fork。
+          请求{' '}
+          <Link
+            href="https://docs.github.com/cn/rest/reference/search#search-topics"
+            target="_blank"
+          >
+            API
+          </Link>{' '}
+          获取 Github 上 Vue 或 React 的 Topic
+          下的仓库并显示拥有者、仓库名、Star 和 Fork。
         </li>
+        <li>分页功能：显示当前页和总页数，允许切页查看不同页的数据。</li>
         <li>
-          缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义。
+          缓存功能：缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义，默认为
+          5。
         </li>
       </ul>
     ),
@@ -39,16 +48,19 @@ export const demos = [
     content: (
       <ul>
         <li>
-          <Text code>EventBus.emit</Text>
+          <Text code>EventBus.emit</Text>：发布事件
         </li>
         <li>
-          <Text code>EventBus.on</Text>
+          <Text code>EventBus.on</Text>：监听某个事件
         </li>
         <li>
-          <Text code>EventBus.once</Text>
+          <Text code>EventBus.once</Text>：只监听某个事件一次
         </li>
         <li>
-          <Text code>EventBus.clear</Text>
+          <Text code>EventBus.off</Text>：取消监听某个事件
+        </li>
+        <li>
+          可以用 <Text code>*</Text> 表示所有事件
         </li>
       </ul>
     ),
