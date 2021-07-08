@@ -12,7 +12,9 @@
     "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
     "commit": "cz",
     "prepare": "is-ci || husky install",
-    "lint": "yarn run lint:json && yarn run lint:markdown && yarn run lint:script && yarn run lint:style"
+    "lint": "yarn run lint:json && yarn run lint:markdown && yarn run lint:script && yarn run lint:style",
+    "test": "yarn run lint",
+    "release": "release-it"
   },
   "dependencies": {
     "@ant-design/icons": "~4.6.2",
