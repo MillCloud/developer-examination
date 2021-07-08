@@ -8,7 +8,7 @@
     "serve": "vite preview",
     "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
     "lint:script": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
-    "lint:style": "stylelint ./**/*.{css,less,sass,scss,vue} --fix --ignore-path=.gitignore",
+    "lint:style": "stylelint ./**/*.{css,less,sass,scss,vue} --fix --allow-empty-input --ignore-path=.gitignore",
     "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
     "commit": "cz",
     "prepare": "is-ci || husky install",
