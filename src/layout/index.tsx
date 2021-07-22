@@ -2,8 +2,10 @@ import { memo, useMemo } from 'react';
 import { Layout as ALayout, Typography, Image, Row, Menu, BackTop } from 'antd';
 import logoUrl from '@/assets/logo.png';
 import { useHistory, useLocation } from 'react-router-dom';
+import pkg from '@@/package.json';
 
-const { Header, Content } = ALayout;
+const { Header, Content, Footer } = ALayout;
+const { Title, Link } = Typography;
 
 const routes = [
   {
@@ -43,9 +45,9 @@ const Layout = memo(({ children }) => {
               className="w-20"
             />
           </a>
-          <Typography.Title level={5} className="!text-white !mb-0 mx-4">
+          <Title level={5} className="!text-white !mb-0 mx-4">
             前端测试
-          </Typography.Title>
+          </Title>
           <Menu
             theme="dark"
             mode="horizontal"
@@ -60,6 +62,17 @@ const Layout = memo(({ children }) => {
         </Row>
       </Header>
       <Content style={{ marginTop: 64, padding: 24 }}>{children}</Content>
+      <Footer>
+        <Row justify="center">v{pkg.version}</Row>
+        <Row justify="center">
+          <Link
+            href={`https://github.com/MillCloud/${pkg.name}`}
+            target="_blank"
+          >
+            Github
+          </Link>
+        </Row>
+      </Footer>
       <BackTop />
     </ALayout>
   );
