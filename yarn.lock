@@ -605,11 +605,6 @@
   resolved "https://registry.npmjs.org/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@iconify-icons/logos@~1.1.10":
-  version "1.1.10"
-  resolved "https://registry.npmjs.org/@iconify-icons/logos/-/logos-1.1.10.tgz#e77c9303804e5fff4e0b5257c1ad982ca5528187"
-  integrity sha512-pS5Zt2GNoVPCL5t2Aiv2PvB6iuEoU+Z0KIByCdOeoiiGOze7M1qYNIxd/dThclqd3IGTrtIlXVbgkntBFKi9xQ==
-
 "@iconify-icons/mdi@~1.1.16":
   version "1.1.16"
   resolved "https://registry.npmjs.org/@iconify-icons/mdi/-/mdi-1.1.16.tgz#ff35b9559fcc69b0123b730b5fbddb01a4719cde"
