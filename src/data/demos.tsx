@@ -22,18 +22,31 @@ export const demos = [
           </Link>{' '}
           请求{' '}
           <Link
-            href="https://docs.github.com/cn/rest/reference/search#search-topics"
+            href="https://docs.github.com/cn/rest/reference/search#search-repositories"
             target="_blank"
           >
-            API
+            Github API
           </Link>{' '}
-          获取 Github 上 Vue 或 React 的 Topic
-          下的仓库并显示拥有者、仓库名、Star 和 Fork。
+          或{' '}
+          <Link
+            href="https://gitee.com/api/v5/swagger#/getV5SearchRepositories"
+            target="_blank"
+          >
+            Gitee API
+          </Link>{' '}
+          获取 <Text code>Vue</Text> 或 <Text code>React</Text>{' '}
+          相关仓库并显示拥有者、仓库名、Star 和 Fork。
         </li>
         <li>分页功能：显示当前页和总页数，允许切页查看不同页的数据。</li>
         <li>
           缓存功能：缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义，默认为
           5。
+        </li>
+        <li>
+          演示：
+          <Link href="https://next-fetch-demo.vercel.app" target="_blank">
+            next-fetch-demo
+          </Link>
         </li>
       </ul>
     ),
@@ -93,7 +106,16 @@ export const demos = [
         <li>
           可以选择难度，初级 9x9 10 雷，中级 16x16 40 雷，高级 16x30 99 雷。
         </li>
-        <li>允许自定义行、列、雷数量。</li>
+        <li>可以自定义难度，即允许自定义行、列、雷数量。</li>
+        <li>
+          演示：
+          <Link
+            href="https://next-mine-sweeper-demo.vercel.app"
+            target="_blank"
+          >
+            next-mine-sweeper-demo
+          </Link>
+        </li>
       </ul>
     ),
   },

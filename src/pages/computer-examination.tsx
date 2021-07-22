@@ -1,20 +1,49 @@
 import { memo, ReactNode } from 'react';
-import { Collapse, Typography, Button } from 'antd';
+import { Collapse, Typography, Button, Space, Tooltip, Tabs } from 'antd';
 import Markdown from 'markdown-to-jsx';
 import { utils, demos } from '@/data';
-import { DownloadOutlined } from '@ant-design/icons';
+import { Icon } from '@iconify/react';
+import jsIcon from '@iconify-icons/mdi/language-javascript';
+import tsIcon from '@iconify-icons/mdi/language-typescript';
 import fileSaver from 'file-saver';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
+const { TabPane } = Tabs;
+
+const Code = ({
+  className,
+  children,
+}: {
+  className: string;
+  children: ReactNode;
+}) => (
+  <SyntaxHighlighter
+    language={
+      className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'
+    }
+  >
+    {children}
+  </SyntaxHighlighter>
+);
+
+const Pre = ({ children, ...props }: { children: ReactNode }) =>
+  // @ts-ignore
+  children?.type === 'code' ? (
+    // @ts-ignore
+    Code(children.props)
+  ) : (
+    <pre {...props}>{children}</pre>
+  );
 
 const ComputerExamination = memo(() => (
   <Typography>
-    <Title>工具类</Title>
+    <Title>工具方法</Title>
     <Paragraph>
-      你需要使用原生 JavaScript/TypeScript4 给出尽可能简洁的实现。
+      你需要使用原生 JavaScript / TypeScript 给出尽可能简洁的实现。
     </Paragraph>
-    <Paragraph>请尽力完成，以便我们更全面地考量你的能力。</Paragraph>
+    <Paragraph>请尽力完成。</Paragraph>
     <Paragraph>
       <Collapse>
         {utils.map((util) => (
@@ -22,24 +51,65 @@ const ComputerExamination = memo(() => (
             header={util.header}
             key={util.key}
             extra={
-              <Button
-                shape="circle"
-                icon={<DownloadOutlined />}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  fileSaver.saveAs(new Blob([util.content]), `${util.key}.js`);
-                }}
-              />
+              <Space>
+                <Tooltip title="获取 JavaScript 文件">
+                  <Button
+                    shape="circle"
+                    icon={<Icon icon={jsIcon} className="anticon" />}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      fileSaver.saveAs(
+                        new Blob([util.content]),
+                        `${util.key}.js`,
+                      );
+                    }}
+                  />
+                </Tooltip>
+                <Tooltip title="获取 TypeScript 文件">
+                  <Button
+                    shape="circle"
+                    icon={<Icon icon={tsIcon} className="anticon" />}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      fileSaver.saveAs(
+                        new Blob([util.tsContent]),
+                        `${util.key}.js`,
+                      );
+                    }}
+                  />
+                </Tooltip>
+              </Space>
             }
           >
-            <Markdown>{`~~~javascript
+            <Tabs centered defaultActiveKey="js">
+              <TabPane tab="JavaScript" key="js">
+                <Markdown
+                  options={{
+                    overrides: {
+                      pre: Pre,
+                    },
+                  }}
+                >{`~~~javascript
 ${util.content}
 ~~~`}</Markdown>
+              </TabPane>
+              <TabPane tab="TypeScript" key="ts">
+                <Markdown
+                  options={{
+                    overrides: {
+                      pre: Pre,
+                    },
+                  }}
+                >{`~~~typescript
+${util.tsContent ?? util.content}
+~~~`}</Markdown>
+              </TabPane>
+            </Tabs>
           </Panel>
         ))}
       </Collapse>
     </Paragraph>
-    <Title>小项目</Title>
+    <Title>小型项目</Title>
     <Paragraph>
       你需要使用以下其中一种技术栈给出尽可能简洁的代码实现。
     </Paragraph>
