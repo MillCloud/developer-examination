@@ -72,8 +72,8 @@ const ComputerExamination = memo(() => (
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(
-                        new Blob([util.tsContent]),
-                        `${util.key}.js`,
+                        new Blob([util.tsContent ?? util.content]),
+                        `${util.key}.ts`,
                       );
                     }}
                   />
