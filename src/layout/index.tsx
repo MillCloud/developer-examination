@@ -31,10 +31,10 @@ const Layout = memo(({ children }) => {
   return (
     <ALayout className="min-h-screen">
       <Header className="fixed z-1 w-full" style={{ padding: '0 24px' }}>
-        <Row align="middle" className="h-full">
+        <Row align="middle" className="h-full flex-nowrap">
           <a
             href="https://www.millcloud.cn"
-            className="flex flex-row items-center"
+            className="flex flex-row items-center flex-none"
             target="_blank"
             rel="noreferrer"
           >
@@ -45,7 +45,7 @@ const Layout = memo(({ children }) => {
               className="w-20"
             />
           </a>
-          <Title level={5} className="!text-white !mb-0 mx-4">
+          <Title level={5} className="!text-white !mb-0 mx-4 flex-none">
             前端测试
           </Title>
           <Menu
