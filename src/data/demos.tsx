@@ -43,7 +43,7 @@ export const demos = [
           5。
         </li>
         <li>
-          演示：
+          参考：
           <Link href="https://next-fetch-demo.vercel.app" target="_blank">
             next-fetch-demo
           </Link>
@@ -75,6 +75,13 @@ export const demos = [
         <li>
           可以用 <Text code>*</Text> 表示所有事件
         </li>
+        <li>
+          可以参考{' '}
+          <Link href="https://github.com/developit/mitt" target="_blank">
+            mitt
+          </Link>{' '}
+          功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
+        </li>
       </ul>
     ),
   },
@@ -83,8 +90,15 @@ export const demos = [
     key: 'memo',
     content: (
       <ul>
-        <li>输入标题和内容添加备忘。</li>
-        <li>允许筛选和排序。</li>
+        <li>输入标题、备注和优先级添加备忘。</li>
+        <li>允许筛选标题或内容。</li>
+        <li>自动根据优先级排序</li>
+        <li>
+          参考：
+          <Link href="https://vue-memos-demo.vercel.app" target="_blank">
+            vue-memos-demo
+          </Link>
+        </li>
       </ul>
     ),
   },
@@ -108,7 +122,7 @@ export const demos = [
         </li>
         <li>可以自定义难度，即允许自定义行、列、雷数量。</li>
         <li>
-          演示：
+          参考：
           <Link
             href="https://next-mine-sweeper-demo.vercel.app"
             target="_blank"
@@ -137,6 +151,15 @@ export const demos = [
         <li>下落速度应随游玩时间逐渐加快。</li>
         <li>允许自定义初始下落速度、行、列。</li>
         <li>方块要有多种颜色。</li>
+        <li>
+          参考：
+          <Link href="https://binaryify.github.io/vue-tetris/" target="_blank">
+            vue-tetris
+          </Link>{' '}
+          <Link href="https://chvin.github.io/react-tetris/" target="_blank">
+            react-tetris
+          </Link>
+        </li>
       </ul>
     ),
   },
@@ -156,6 +179,18 @@ export const demos = [
           规则。
         </li>
         <li>允许最多三次撤回操作。</li>
+        <li>
+          参考：
+          <Link href="https://pengfu.github.io/vue-2048/" target="_blank">
+            vue-2048
+          </Link>{' '}
+          <Link
+            href="http://ivanvergiliev.github.io/2048-react/"
+            target="_blank"
+          >
+            react-2048
+          </Link>
+        </li>
       </ul>
     ),
   },
