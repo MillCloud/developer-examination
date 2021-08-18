@@ -15,20 +15,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '14.17.5'
-
-      - name: Cache Dependencies
-        uses: actions/cache@v2
-        id: pnpm-cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
 
       - name: Install Dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
