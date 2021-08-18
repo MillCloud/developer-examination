@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import routes from 'virtual:generated-pages-react';
 import Layout from '@/layout';
-import 'ress';
 import 'virtual:windi.css';
 
 ReactDOM.render(
