@@ -31,6 +31,20 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 1024,
   },
+  optimizeDeps: {
+    include: [
+      'antd',
+      'file-saver',
+      'markdown-to-jsx',
+      'react',
+      'react-dom',
+      'react-markdown',
+      'react-router',
+      'react-router-config',
+      'react-router-dom',
+      'react-syntax-highlighter',
+    ],
+  },
   css: {
     preprocessorOptions: {
       less: {
