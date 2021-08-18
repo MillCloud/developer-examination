@@ -1,16 +1,24 @@
 import { memo, useMemo } from 'react';
-import { Layout as ALayout, Typography, Image, Row, Menu, BackTop } from 'antd';
-import logoUrl from '@/assets/logo.png';
+import {
+  Layout as ALayout,
+  Typography,
+  Image,
+  Row,
+  Menu,
+  BackTop,
+  Space,
+} from 'antd';
 import { useHistory, useLocation } from 'react-router-dom';
 import pkg from '@@/package.json';
+import logoUrl from '@/assets/logo.png';
 
 const { Header, Content, Footer } = ALayout;
 const { Title, Link } = Typography;
 
 const routes = [
   {
-    path: '/introduction',
-    name: 'introduction',
+    path: '/',
+    name: 'index',
   },
   {
     path: '/computer-examination',
@@ -56,7 +64,7 @@ const Layout = memo(({ children }) => {
               history.push(`/${key}`);
             }}
           >
-            <Menu.Item key="introduction">说明</Menu.Item>
+            <Menu.Item key="index">说明</Menu.Item>
             <Menu.Item key="computer-examination">机试</Menu.Item>
           </Menu>
         </Row>
@@ -65,12 +73,32 @@ const Layout = memo(({ children }) => {
       <Footer>
         <Row justify="center">v{pkg.version}</Row>
         <Row justify="center">
-          <Link
-            href={`https://github.com/MillCloud/${pkg.name}`}
-            target="_blank"
-          >
-            Github
-          </Link>
+          <Space>
+            <Link
+              href={`https://github.com/MillCloud/${pkg.name}`}
+              target="_blank"
+            >
+              Github Repo
+            </Link>
+            <Link
+              href={`https://gitee.com/MillCloud/${pkg.name}`}
+              target="_blank"
+            >
+              Gitee Repo
+            </Link>
+            <Link
+              href={`https://millcloud.github.io/${pkg.name}/`}
+              target="_blank"
+            >
+              Github Page
+            </Link>
+            <Link
+              href={`https://millcloud.gitee.io/${pkg.name}/`}
+              target="_blank"
+            >
+              Gitee Page
+            </Link>
+          </Space>
         </Row>
       </Footer>
       <BackTop />
