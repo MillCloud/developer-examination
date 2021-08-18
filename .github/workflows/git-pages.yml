@@ -27,8 +27,7 @@ jobs:
           cache-dependency-path: 'pnpm-lock.yaml'
 
       - name: Install Dependencies
-        if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build Github Pages
         run: pnpm run build
