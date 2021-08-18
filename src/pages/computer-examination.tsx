@@ -1,12 +1,10 @@
 import { memo, ReactNode } from 'react';
 import { Collapse, Typography, Button, Space, Tooltip, Tabs } from 'antd';
 import Markdown from 'markdown-to-jsx';
-import { utils, demos } from '@/data';
 import { Icon } from '@iconify/react';
-import jsIcon from '@iconify-icons/mdi/language-javascript';
-import tsIcon from '@iconify-icons/mdi/language-typescript';
 import fileSaver from 'file-saver';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { utils, demos } from '@/data';
 
 const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
@@ -55,7 +53,12 @@ const ComputerExamination = memo(() => (
                 <Tooltip title="获取 JavaScript 文件">
                   <Button
                     shape="circle"
-                    icon={<Icon icon={jsIcon} className="anticon" />}
+                    icon={
+                      <Icon
+                        icon="mdi:language-javascript"
+                        className="anticon mx-auto"
+                      />
+                    }
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(
@@ -68,7 +71,12 @@ const ComputerExamination = memo(() => (
                 <Tooltip title="获取 TypeScript 文件">
                   <Button
                     shape="circle"
-                    icon={<Icon icon={tsIcon} className="anticon" />}
+                    icon={
+                      <Icon
+                        icon="mdi:language-typescript"
+                        className="anticon mx-auto"
+                      />
+                    }
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(

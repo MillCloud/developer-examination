@@ -3,7 +3,7 @@ import { Typography } from 'antd';
 
 const { Title, Paragraph, Link } = Typography;
 
-const Introduction = memo(() => (
+const Index = memo(() => (
   <Typography>
     <Title>目的</Title>
     <Paragraph>
@@ -59,4 +59,4 @@ const Introduction = memo(() => (
   </Typography>
 ));
 
-export default Introduction;
+export default Index;
