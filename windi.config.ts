@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite-plugin-windicss';
+import { defineConfig, transform } from 'windicss/helpers';
 import windiColors from 'windicss/colors';
 import {
   red as antdRed,
@@ -22,7 +22,7 @@ import lineClampPlugin from 'windicss/plugin/line-clamp';
 import scrollSnapPlugin from 'windicss/plugin/scroll-snap';
 import typographyPlugin from 'windicss/plugin/typography';
 // @ts-ignore
-import animationsPlugin from '@windicss/animations';
+import animationsPlugin from '@windicss/plugin-animations';
 // @ts-ignore
 import scrollbarPlugin from '@windicss/plugin-scrollbar';
 // @ts-ignore
@@ -47,6 +47,7 @@ export default defineConfig({
     questionMarkPlugin,
     heropatternsPlugin,
     interactionVariantsPlugin,
+    transform('daisyui'),
   ],
   theme: {
     extend: {
