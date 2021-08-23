@@ -286,7 +286,7 @@ console.log("newArray", newArray);
     header: '去除字符串两边子串',
     key: 'stringTrim',
     content: `/**
- * @desc 对给定的字符串，去除两边的特定子串
+ * @desc 对给定的字符串，去除两边的特定子串，子串不会含有需要转义的字符
  * @param {string} string
  * @param {string} substring
  * @returns {string} 去除子串后的字符串
@@ -300,9 +300,12 @@ console.log('result1', result1); // abc
 // 子串为其它字符串的测试样例
 const result2 = stringTrim('-_-abc-_--_-', '-_-');
 console.log('result2', result2); // abc
+
+const result3 = stringTrim("-_-abc-_--_-", "-");
+console.log("result3", result3); // _-abc-_--_
 `,
     tsContent: `/**
- * @desc 对给定的字符串，去除两边的特定子串
+ * @desc 对给定的字符串，去除两边的特定子串，子串不会含有需要转义的字符
  */
 const stringTrim = (string: string, substring = " "): string => {};
 
@@ -313,6 +316,9 @@ console.log("result1", result1); // abc
 // 子串为其它字符串的测试样例
 const result2 = stringTrim("-_-abc-_--_-", "-_-");
 console.log("result2", result2); // abc
+
+const result3 = stringTrim("-_-abc-_--_-", "-");
+console.log("result3", result3); // _-abc-_--_
 `,
   },
   {
