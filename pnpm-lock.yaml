@@ -7,10 +7,10 @@ specifiers:
   '@babel/eslint-parser': ~7.15.0
   '@commitlint/cli': ~13.1.0
   '@iconify/react': ~3.0.1
-  '@modyqyw/fabric': ~3.0.2
+  '@modyqyw/fabric': ~3.0.3
   '@types/file-saver': ~2.0.3
-  '@types/node': ~16.6.1
-  '@types/react': ~17.0.18
+  '@types/node': ~16.7.1
+  '@types/react': ~17.0.19
   '@types/react-dom': ~17.0.9
   '@types/react-router-config': ~5.0.3
   '@types/react-router-dom': ~5.1.8
@@ -20,12 +20,13 @@ specifiers:
   '@vitejs/plugin-react-refresh': ~1.3.6
   '@vitejs/plugin-vue': ~1.4.0
   '@vue/compiler-sfc': ~3.2.4
-  '@windicss/animations': ~1.0.8
+  '@windicss/plugin-animations': ~1.0.8
   '@windicss/plugin-heropatterns': ~0.0.8
   '@windicss/plugin-interaction-variants': ~1.0.0
   '@windicss/plugin-question-mark': ~0.1.1
   '@windicss/plugin-scrollbar': ~1.2.3
   antd: ~4.16.12
+  daisyui: ~1.13.2
   eslint: ~7.32.0
   file-saver: ~2.0.5
   husky: ~7.0.1
@@ -46,7 +47,7 @@ specifiers:
   stylelint: ~13.13.1
   typescript: ~4.3.5
   vite: ~2.5.0
-  vite-plugin-pages: ~0.17.3
+  vite-plugin-pages: ~0.17.4
   vite-plugin-style-import: ~1.1.1
   vite-plugin-windicss: ~1.2.7
   vite-react-jsx: ~1.1.2
@@ -57,17 +58,13 @@ dependencies:
   '@ant-design/colors': 6.0.0
   '@ant-design/icons': 4.6.3_react-dom@17.0.2+react@17.0.2
   '@iconify/react': 3.0.1
-  '@windicss/animations': 1.0.8
-  '@windicss/plugin-heropatterns': 0.0.8
-  '@windicss/plugin-interaction-variants': 1.0.0
-  '@windicss/plugin-question-mark': 0.1.1
-  '@windicss/plugin-scrollbar': 1.2.3
   antd: 4.16.12_react-dom@17.0.2+react@17.0.2
+  daisyui: 1.13.2
   file-saver: 2.0.5
   markdown-to-jsx: 7.1.3_react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-markdown: 7.0.0_d94f33b06fdce27140dc5b0a474a21a8
+  react-markdown: 7.0.0_4cd822c6044f4c1a7e1f1fea0e728f12
   react-router: 5.2.0_react@17.0.2
   react-router-config: 5.1.1_react-router@5.2.0+react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
@@ -78,10 +75,10 @@ devDependencies:
   '@babel/core': 7.15.0
   '@babel/eslint-parser': 7.15.0_@babel+core@7.15.0+eslint@7.32.0
   '@commitlint/cli': 13.1.0
-  '@modyqyw/fabric': 3.0.2_324d7c6ac8f303ec77bc1a6e2a48bc4f
+  '@modyqyw/fabric': 3.0.3_324d7c6ac8f303ec77bc1a6e2a48bc4f
   '@types/file-saver': 2.0.3
-  '@types/node': 16.6.1
-  '@types/react': 17.0.18
+  '@types/node': 16.7.1
+  '@types/react': 17.0.19
   '@types/react-dom': 17.0.9
   '@types/react-router-config': 5.0.3
   '@types/react-router-dom': 5.1.8
@@ -91,6 +88,11 @@ devDependencies:
   '@vitejs/plugin-react-refresh': 1.3.6
   '@vitejs/plugin-vue': 1.4.0_@vue+compiler-sfc@3.2.4
   '@vue/compiler-sfc': 3.2.4
+  '@windicss/plugin-animations': 1.0.9
+  '@windicss/plugin-heropatterns': 0.0.8
+  '@windicss/plugin-interaction-variants': 1.0.0
+  '@windicss/plugin-question-mark': 0.1.1
+  '@windicss/plugin-scrollbar': 1.2.3
   eslint: 7.32.0
   husky: 7.0.1
   is-ci: 3.0.0
@@ -102,7 +104,7 @@ devDependencies:
   stylelint: 13.13.1
   typescript: 4.3.5
   vite: 2.5.0
-  vite-plugin-pages: 0.17.3_7fe3aad99197253b81205fb92dfdbad3
+  vite-plugin-pages: 0.17.4_7fe3aad99197253b81205fb92dfdbad3
   vite-plugin-style-import: 1.1.1_vite@2.5.0
   vite-plugin-windicss: 1.2.7_vite@2.5.0
   vite-react-jsx: 1.1.2_vite@2.5.0
@@ -656,8 +658,8 @@ packages:
     resolution: {integrity: sha512-yUskSSR80JzRSWcqNsBAG9AN802XzZgHsex8mTOkMLYcPQC3fk1XwK17ulnY5vf692OafhGCAMccR8TWKFaGdw==}
     dev: false
 
-  /@modyqyw/fabric/3.0.2_324d7c6ac8f303ec77bc1a6e2a48bc4f:
-    resolution: {integrity: sha512-JHG5Z1+28miqYGxgDOAzWJRCslGGD29PlkV6ILFuoyIv2jfUS7p93/2ydtYrPd7g0/stDgmi1sp9T3K2xDdk0w==}
+  /@modyqyw/fabric/3.0.3_324d7c6ac8f303ec77bc1a6e2a48bc4f:
+    resolution: {integrity: sha512-gauxeEe4sLDA1HthT63jwJgLE9CmsZ4nZ2Gz/2TJuHqByaj0Fa6HEaJ8sqOSnudLvEmnikcr9uKKHgivKz5OKg==}
     engines: {node: ^12.22.5 || ^14.17.5 || ^16.6.2, npm: ^6.14.14 || ^7.20.3}
     hasBin: true
     dependencies:
@@ -961,6 +963,10 @@ packages:
     resolution: {integrity: sha512-Sr7BhXEAer9xyGuCN3Ek9eg9xPviCF2gfu9kTfuU2HkTVAMYSDeX40fvpmo72n5nansg3nsBjuQBrsS28r+NUw==}
     dev: true
 
+  /@types/node/16.7.1:
+    resolution: {integrity: sha512-ncRdc45SoYJ2H4eWU9ReDfp3vtFqDYhjOsKlFFUDEn8V1Bgr2RjYal8YT5byfadWIRluhPFU6JiDOl0H6Sl87A==}
+    dev: true
+
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -1010,6 +1016,14 @@ packages:
 
   /@types/react/17.0.18:
     resolution: {integrity: sha512-YTLgu7oS5zvSqq49X5Iue5oAbVGhgPc5Au29SJC4VeE17V6gASoOxVkUDy9pXFMRFxCWCD9fLeweNFizo3UzOg==}
+    dependencies:
+      '@types/prop-types': 15.7.4
+      '@types/scheduler': 0.16.2
+      csstype: 3.0.8
+    dev: true
+
+  /@types/react/17.0.19:
+    resolution: {integrity: sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -1210,11 +1224,6 @@ packages:
     resolution: {integrity: sha512-j2j1MRmjalVKr3YBTxl/BClSIc8UQ8NnPpLYclxerK65JIowI4O7n8O8lElveEtEoHxy1d7BelPUDI0Q4bumqg==}
     dev: true
 
-  /@windicss/animations/1.0.8:
-    resolution: {integrity: sha512-2edYQdTVh3koQYmZQqXU2hPIvAJRjkqOP/FpzCQv3U0bbtEgmLk3UeHYHzo9jSL5obV12pEhJuAHIzKo6cdRyw==}
-    deprecated: rename package
-    dev: false
-
   /@windicss/config/1.2.7:
     resolution: {integrity: sha512-XpH/dkXWk2LGygHzHBWWEW/yGcLqhpFFN2jo+zMeWZ1ggBzndQQzBHqHGQHcr6U6v3PoBuOz1prVWgUmQxn9eQ==}
     dependencies:
@@ -1225,23 +1234,27 @@ packages:
       - supports-color
     dev: true
 
+  /@windicss/plugin-animations/1.0.9:
+    resolution: {integrity: sha512-9WsQsPzLurkwV5zaMCwmylxfSHlQ1pPmzud4ysvMkMBRB7obub9ESmqlHefcCjEhatz/ZROi1U1XOuOPPUO1nA==}
+    dev: true
+
   /@windicss/plugin-heropatterns/0.0.8:
     resolution: {integrity: sha512-HaDXY9arOiscyEO6YJl3L/VU8nMHaLxg2nZKfnv+4L+BnSCcaoeAtmI7WbG6YV7amZcN6RZPvXSCHyUh9u+EyA==}
     dependencies:
       lodash: 4.17.21
-    dev: false
+    dev: true
 
   /@windicss/plugin-interaction-variants/1.0.0:
     resolution: {integrity: sha512-jk0kvJEwphPlzjgCASxi0yCrLIrMPBHKTjPB1vF2LZsmWVaIPhKQRfpJW6+G093ipDos1E2BkevDrh/R2Ln8gg==}
-    dev: false
+    dev: true
 
   /@windicss/plugin-question-mark/0.1.1:
     resolution: {integrity: sha512-LTnySh28mFncJqCw7VjZzYD3HkJynjHQ8wAIgsZUPTi8WzDJtUeYyFc8/ImXGL/jon55zzg9yy9y/lUyCvvrmA==}
-    dev: false
+    dev: true
 
   /@windicss/plugin-scrollbar/1.2.3:
     resolution: {integrity: sha512-+cqv1pEmaNPITeBJ/lO6tc8IjBzRhQ+V9G8r249MMXivYoxUO4DtModBrRGHVvBgsYZgPXDsIv2jqtxc4NqYEg==}
-    dev: false
+    dev: true
 
   /@windicss/plugin-utils/1.2.7:
     resolution: {integrity: sha512-aNQhd1nEjkVsCHmzq0+4VGTmovOGGfPnH2hspH4YuDxMDhQ/99VrBdyk7irngWJjedjHB3+UYCSYWpY5a+2Hbg==}
@@ -2019,6 +2032,10 @@ packages:
   /csstype/3.0.8:
     resolution: {integrity: sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==}
     dev: true
+
+  /daisyui/1.13.2:
+    resolution: {integrity: sha512-aG+2NiyMIBRxgm5KDB93gbA6DWbjnqxkQ/+H1nUaVc7pesThRtpf4AjJED6FI6h2603FF70+N9akbq6lUvV+Gg==}
+    dev: false
 
   /damerau-levenshtein/1.0.7:
     resolution: {integrity: sha512-VvdQIPGdWP0SqFXghj79Wf/5LArmreyMsGLa6FG6iC4t3j7j5s71TrwWmT/4akbDQIqjfACkLZmjXhA7g2oUZw==}
@@ -5922,14 +5939,14 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
-  /react-markdown/7.0.0_d94f33b06fdce27140dc5b0a474a21a8:
+  /react-markdown/7.0.0_4cd822c6044f4c1a7e1f1fea0e728f12:
     resolution: {integrity: sha512-qdWfKxMgdKF3kHAV5pmcB12fAvytPoTpYwKTO6O/I3HujrK7sKIv6j4RnXVNLrNUh+TaBk+KtqpGzIKslX2rDg==}
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
     dependencies:
       '@types/hast': 2.3.2
-      '@types/react': 17.0.18
+      '@types/react': 17.0.19
       '@types/unist': 2.0.6
       comma-separated-tokens: 2.0.2
       prop-types: 15.7.2
@@ -7267,8 +7284,8 @@ packages:
       vfile-message: 3.0.2
     dev: false
 
-  /vite-plugin-pages/0.17.3_7fe3aad99197253b81205fb92dfdbad3:
-    resolution: {integrity: sha512-Lyn4kZ+2cbj47JwW3ENRyDv7lo10YPcPFKKXOqPR96RoL665DLqVs4UjvSUQjKleH+OTG4moCYRHbFDRw62d/Q==}
+  /vite-plugin-pages/0.17.4_7fe3aad99197253b81205fb92dfdbad3:
+    resolution: {integrity: sha512-EefR3IMldworGlAWRpz4t7iFJe90Va3G1hpTpUf9rAEbUYco6MSIxYA/+uy4CQwNl+Zcp6gZCskB6/QdWZtq0g==}
     peerDependencies:
       '@vue/compiler-sfc': '>=3'
       vite: '>=2'
