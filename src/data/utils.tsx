@@ -60,306 +60,6 @@ console.log("result", result); // 80
 `,
   },
   {
-    header: '数组浅去重',
-    key: 'arrayDeDuplication',
-    content: `/**
- * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
- * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- * @typedef {string | number | boolean | undefined | null} BaseType
- * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
- * @returns {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} 去重后的数组
- */
-const arrayDeDuplication = (array) => {};
-
-// 测试样例
-const array = [
-  '0',
-  '0',
-  0,
-  0,
-  true,
-  true,
-  false,
-  false,
-  undefined,
-  undefined,
-  null,
-  null,
-  {},
-  {},
-  { a: 1, b: 2 },
-  { b: 2, a: 1 },
-  [],
-  [],
-  [1, 2],
-  [1, 2],
-  [2, 1],
-  [2, 1],
-];
-const newArray = arrayDeDuplication(array);
-console.log('array', array);
-console.log('newArray', newArray);
-
-// [
-//   "0",
-//   "0",
-//   0,
-//   0,
-//   true,
-//   true,
-//   false,
-//   false,
-//   undefined,
-//   undefined,
-//   null,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-// [
-//   "0",
-//   0,
-//   true,
-//   false,
-//   undefined,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-`,
-    tsContent: `/**
- * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
- * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- */
-type BaseType = string | number | boolean | undefined | null;
-
-const arrayDeDuplication = (
-  array: (BaseType | BaseType[] | { [propName: string]: BaseType })[]
-): (BaseType | BaseType[] | { [propName: string]: BaseType })[] => {};
-
-// 测试样例
-const array = [
-  "0",
-  "0",
-  0,
-  0,
-  true,
-  true,
-  false,
-  false,
-  undefined,
-  undefined,
-  null,
-  null,
-  {},
-  {},
-  { a: 1, b: 2 },
-  { b: 2, a: 1 },
-  [],
-  [],
-  [1, 2],
-  [1, 2],
-  [2, 1],
-  [2, 1],
-];
-const newArray = arrayDeDuplication(array);
-console.log("array", array);
-console.log("newArray", newArray);
-
-// [
-//   "0",
-//   "0",
-//   0,
-//   0,
-//   true,
-//   true,
-//   false,
-//   false,
-//   undefined,
-//   undefined,
-//   null,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-// [
-//   "0",
-//   0,
-//   true,
-//   false,
-//   undefined,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-`,
-  },
-  {
-    header: '数组深去重',
-    key: 'arrayDeepDeDuplication',
-    content: `/**
- * @desc 对给定数组去重，对于引用类型，需要做深层次比较
- * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- * @typedef {string | number | boolean | undefined | null} BaseType
- * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
- * @returns {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} 去重后的数组
- */
-const arrayDeDuplication = (array) => {};
-
-// 测试样例
-const array = [
-  '0',
-  '0',
-  0,
-  0,
-  true,
-  true,
-  false,
-  false,
-  undefined,
-  undefined,
-  null,
-  null,
-  {},
-  {},
-  { a: 1, b: 2 },
-  { b: 2, a: 1 },
-  [],
-  [],
-  [1, 2],
-  [1, 2],
-  [2, 1],
-  [2, 1],
-];
-const newArray = arrayDeDuplication(array);
-console.log('array', array);
-console.log('newArray', newArray);
-
-// [
-//   "0",
-//   "0",
-//   0,
-//   0,
-//   true,
-//   true,
-//   false,
-//   false,
-//   undefined,
-//   undefined,
-//   null,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-// ["0", 0, true, false, undefined, null, {}, { a: 1, b: 2 }, [], [1, 2], [2, 1]]
-`,
-    tsContent: `/**
- * @desc 对给定数组去重，对于引用类型，需要做深层次比较
- * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
- */
-type BaseType = string | number | boolean | undefined | null;
-
-const arrayDeDuplication = (
-  array: (BaseType | BaseType[] | { [propName: string]: BaseType })[]
-): (BaseType | BaseType[] | { [propName: string]: BaseType })[] => {};
-
-// 测试样例
-const array = [
-  "0",
-  "0",
-  0,
-  0,
-  true,
-  true,
-  false,
-  false,
-  undefined,
-  undefined,
-  null,
-  null,
-  {},
-  {},
-  { a: 1, b: 2 },
-  { b: 2, a: 1 },
-  [],
-  [],
-  [1, 2],
-  [1, 2],
-  [2, 1],
-  [2, 1],
-];
-const newArray = arrayDeDuplication(array);
-console.log("array", array);
-console.log("newArray", newArray);
-
-// [
-//   "0",
-//   "0",
-//   0,
-//   0,
-//   true,
-//   true,
-//   false,
-//   false,
-//   undefined,
-//   undefined,
-//   null,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-// ["0", 0, true, false, undefined, null, {}, { a: 1, b: 2 }, [], [1, 2], [2, 1]]
-`,
-  },
-  {
     header: '去除字符串两边子串',
     key: 'stringTrim',
     content: `/**
@@ -499,6 +199,52 @@ const uniqueId = (prefix = ""): string => {};
 console.log("result", uniqueId()); // 1
 console.log("result", uniqueId("prefix")); // prefix-2
 console.log("result", uniqueId()); // 3
+`,
+  },
+  {
+    header: '数组浅去重',
+    key: 'arrayDeDuplication',
+    content: `/**
+ * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ * @typedef {string | number | boolean | undefined | null} BaseType
+ * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
+ * @returns {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} 去重后的数组
+ */
+const arrayDeDuplication = (array) => {};
+`,
+    tsContent: `/**
+ * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ */
+type BaseType = string | number | boolean | undefined | null;
+
+const arrayDeDuplication = (
+  array: (BaseType | BaseType[] | { [propName: string]: BaseType })[]
+): (BaseType | BaseType[] | { [propName: string]: BaseType })[] => {};
+`,
+  },
+  {
+    header: '数组深去重',
+    key: 'arrayDeepDeDuplication',
+    content: `/**
+ * @desc 对给定数组去重，对于引用类型，需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ * @typedef {string | number | boolean | undefined | null} BaseType
+ * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
+ * @returns {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} 去重后的数组
+ */
+const arrayDeDuplication = (array) => {};
+`,
+    tsContent: `/**
+ * @desc 对给定数组去重，对于引用类型，需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ */
+type BaseType = string | number | boolean | undefined | null;
+
+const arrayDeDuplication = (
+  array: (BaseType | BaseType[] | { [propName: string]: BaseType })[]
+): (BaseType | BaseType[] | { [propName: string]: BaseType })[] => {};
 `,
   },
   {
