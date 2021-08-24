@@ -4,6 +4,7 @@ import Markdown from 'markdown-to-jsx';
 import { Icon } from '@iconify/react';
 import fileSaver from 'file-saver';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { utils, demos } from '@/data';
 
 const { Title, Paragraph, Text } = Typography;
@@ -21,6 +22,7 @@ const Code = ({
     language={
       className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'
     }
+    style={materialDark}
   >
     {children}
   </SyntaxHighlighter>
