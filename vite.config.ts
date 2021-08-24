@@ -33,6 +33,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
+      '@iconify/react',
       'antd',
       'file-saver',
       'markdown-to-jsx',
