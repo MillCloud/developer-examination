@@ -76,11 +76,10 @@ export const demos = [
           可以用 <Text code>*</Text> 表示所有事件
         </li>
         <li>
-          可以参考{' '}
+          参考：
           <Link href="https://github.com/developit/mitt" target="_blank">
             mitt
-          </Link>{' '}
-          功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
+          </Link>
         </li>
       </ul>
     ),
@@ -155,7 +154,8 @@ export const demos = [
           参考：
           <Link href="https://binaryify.github.io/vue-tetris/" target="_blank">
             vue-tetris
-          </Link>{' '}
+          </Link>
+          ，
           <Link href="https://chvin.github.io/react-tetris/" target="_blank">
             react-tetris
           </Link>
@@ -183,7 +183,8 @@ export const demos = [
           参考：
           <Link href="https://pengfu.github.io/vue-2048/" target="_blank">
             vue-2048
-          </Link>{' '}
+          </Link>
+          ，
           <Link
             href="http://ivanvergiliev.github.io/2048-react/"
             target="_blank"
@@ -195,95 +196,34 @@ export const demos = [
     ),
   },
   {
-    header: '实现一个分割线组件',
-    key: 'divider',
-    content: (
-      <ul>
-        <li>
-          参考{' '}
-          <Link
-            href="https://element-plus.org/#/zh-CN/component/divider"
-            target="_blank"
-          >
-            ElementPlus Divider
-          </Link>{' '}
-          或{' '}
-          <Link
-            href="https://ant.design/components/divider-cn/"
-            target="_blank"
-          >
-            Ant Design Divider
-          </Link>{' '}
-          样式和功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
-        </li>
-      </ul>
-    ),
-  },
-  {
     header: '实现一个按钮组件',
     key: 'button',
     content: (
       <ul>
+        <li>7 种类型：默认、主要、成功、警告、危险、信息、文字。</li>
+        <li>3 种尺寸：默认、小、大。</li>
+        <li>3 种形状：默认、胶囊、圆形。</li>
+        <li>2 种状态：可用、不可用。</li>
         <li>
-          参考{' '}
+          可参考{' '}
+          <Link
+            href="https://getbootstrap.com/docs/5.1/components/buttons/"
+            target="_blank"
+          >
+            bootstrap v5 button
+          </Link>
+          ，
           <Link
             href="https://element-plus.org/#/zh-CN/component/button"
             target="_blank"
           >
-            ElementPlus Button
+            element-plus button
           </Link>{' '}
-          或{' '}
+          和{' '}
           <Link href="https://ant.design/components/button-cn/" target="_blank">
-            Ant Design Button
+            antd button
           </Link>{' '}
-          样式和功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
-        </li>
-      </ul>
-    ),
-  },
-  {
-    header: '实现一个单选框组件',
-    key: 'radio',
-    content: (
-      <ul>
-        <li>
-          参考{' '}
-          <Link
-            href="https://element-plus.org/#/zh-CN/component/radio"
-            target="_blank"
-          >
-            ElementPlus Radio
-          </Link>{' '}
-          或{' '}
-          <Link href="https://ant.design/components/radio-cn/" target="_blank">
-            Ant Design Radio
-          </Link>{' '}
-          样式和功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
-        </li>
-      </ul>
-    ),
-  },
-  {
-    header: '实现一个回到顶部组件',
-    key: 'back-top',
-    content: (
-      <ul>
-        <li>
-          参考{' '}
-          <Link
-            href="https://element-plus.org/#/zh-CN/component/backtop"
-            target="_blank"
-          >
-            ElementPlus Backtop
-          </Link>{' '}
-          或{' '}
-          <Link
-            href="https://ant.design/components/back-top-cn/"
-            target="_blank"
-          >
-            Ant Design Backtop
-          </Link>{' '}
-          样式和功能实现。你可以看源码，理清思路，自己再实现，但不要对着源码照搬。
+          样式。
         </li>
       </ul>
     ),

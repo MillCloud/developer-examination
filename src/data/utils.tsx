@@ -60,10 +60,10 @@ console.log("result", result); // 80
 `,
   },
   {
-    header: '数组去重',
+    header: '数组浅去重',
     key: 'arrayDeDuplication',
     content: `/**
- * @desc 对给定数组去重，对于引用类型，做或不做深层次比较都可以
+ * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
  * @typedef {string | number | boolean | undefined | null} BaseType
  * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
@@ -100,7 +100,6 @@ const newArray = arrayDeDuplication(array);
 console.log('array', array);
 console.log('newArray', newArray);
 
-// 不做深层次比较
 // [
 //   "0",
 //   "0",
@@ -143,36 +142,9 @@ console.log('newArray', newArray);
 //   [2, 1],
 //   [2, 1],
 // ]
-
-// 做深层次比较
-// [
-//   "0",
-//   "0",
-//   0,
-//   0,
-//   true,
-//   true,
-//   false,
-//   false,
-//   undefined,
-//   undefined,
-//   null,
-//   null,
-//   {},
-//   {},
-//   { a: 1, b: 2 },
-//   { b: 2, a: 1 },
-//   [],
-//   [],
-//   [1, 2],
-//   [1, 2],
-//   [2, 1],
-//   [2, 1],
-// ]
-// ["0", 0, true, false, undefined, null, {}, { a: 1, b: 2 }, [], [1, 2], [2, 1]]
 `,
     tsContent: `/**
- * @desc 对给定数组去重，对于引用类型，做或不做深层次比较都可以
+ * @desc 对给定数组去重，对于引用类型，不需要做深层次比较
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
  */
 type BaseType = string | number | boolean | undefined | null;
@@ -210,7 +182,6 @@ const newArray = arrayDeDuplication(array);
 console.log("array", array);
 console.log("newArray", newArray);
 
-// 不做深层次比较
 // [
 //   "0",
 //   "0",
@@ -253,8 +224,114 @@ console.log("newArray", newArray);
 //   [2, 1],
 //   [2, 1],
 // ]
+`,
+  },
+  {
+    header: '数组深去重',
+    key: 'arrayDeepDeDuplication',
+    content: `/**
+ * @desc 对给定数组去重，对于引用类型，需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ * @typedef {string | number | boolean | undefined | null} BaseType
+ * @param {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} array
+ * @returns {Array<BaseType | { [propName: string]: BaseType; } | BaseType[]>} 去重后的数组
+ */
+const arrayDeDuplication = (array) => {};
 
-// 做深层次比较
+// 测试样例
+const array = [
+  '0',
+  '0',
+  0,
+  0,
+  true,
+  true,
+  false,
+  false,
+  undefined,
+  undefined,
+  null,
+  null,
+  {},
+  {},
+  { a: 1, b: 2 },
+  { b: 2, a: 1 },
+  [],
+  [],
+  [1, 2],
+  [1, 2],
+  [2, 1],
+  [2, 1],
+];
+const newArray = arrayDeDuplication(array);
+console.log('array', array);
+console.log('newArray', newArray);
+
+// [
+//   "0",
+//   "0",
+//   0,
+//   0,
+//   true,
+//   true,
+//   false,
+//   false,
+//   undefined,
+//   undefined,
+//   null,
+//   null,
+//   {},
+//   {},
+//   { a: 1, b: 2 },
+//   { b: 2, a: 1 },
+//   [],
+//   [],
+//   [1, 2],
+//   [1, 2],
+//   [2, 1],
+//   [2, 1],
+// ]
+// ["0", 0, true, false, undefined, null, {}, { a: 1, b: 2 }, [], [1, 2], [2, 1]]
+`,
+    tsContent: `/**
+ * @desc 对给定数组去重，对于引用类型，需要做深层次比较
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Object、Array
+ */
+type BaseType = string | number | boolean | undefined | null;
+
+const arrayDeDuplication = (
+  array: (BaseType | BaseType[] | { [propName: string]: BaseType })[]
+): (BaseType | BaseType[] | { [propName: string]: BaseType })[] => {};
+
+// 测试样例
+const array = [
+  "0",
+  "0",
+  0,
+  0,
+  true,
+  true,
+  false,
+  false,
+  undefined,
+  undefined,
+  null,
+  null,
+  {},
+  {},
+  { a: 1, b: 2 },
+  { b: 2, a: 1 },
+  [],
+  [],
+  [1, 2],
+  [1, 2],
+  [2, 1],
+  [2, 1],
+];
+const newArray = arrayDeDuplication(array);
+console.log("array", array);
+console.log("newArray", newArray);
+
 // [
 //   "0",
 //   "0",
@@ -409,8 +486,8 @@ console.log("array", array); // [['a', 1], ['b', '2']]
 const uniqueId = (prefix = '') => {};
 
 // 测试样例
-console.log('result1', uniqueId()); // 1
-console.log('result1', uniqueId('prefix')); // prefix-2
+console.log('result', uniqueId()); // 1
+console.log('result', uniqueId('prefix')); // prefix-2
 console.log('result', uniqueId()); // 3
 `,
     tsContent: `/**
@@ -419,26 +496,26 @@ console.log('result', uniqueId()); // 3
 const uniqueId = (prefix = ""): string => {};
 
 // 测试样例
-console.log("result1", uniqueId()); // 1
-console.log("result1", uniqueId("prefix")); // prefix-2
+console.log("result", uniqueId()); // 1
+console.log("result", uniqueId("prefix")); // prefix-2
 console.log("result", uniqueId()); // 3
 `,
   },
   {
-    header: '数组拷贝',
+    header: '数组浅拷贝',
     key: 'arrayClone',
     content: `/**
- * @desc 对给定数组，返回这个数组的浅拷贝或深拷贝
+ * @desc 对给定数组，返回这个数组的浅拷贝
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Array
  * @typedef {(string | number | boolean | undefined | null)} BaseType
  * @typedef {Array<BaseType | ArrayType>} ArrayType
  * @param {ArrayType} array
- * @returns {ArrayType} 传入数组的浅拷贝或深拷贝
+ * @returns {ArrayType} 传入数组的浅拷贝
  */
 const arrayClone = (array) => {};
 `,
     tsContent: `/**
- * @desc 对给定数组，返回这个数组的浅拷贝或深拷贝
+ * @desc 对给定数组，返回这个数组的浅拷贝
  * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Array
  */
 type BaseType = string | number | boolean | undefined | null;
@@ -448,20 +525,66 @@ const arrayClone = (array: ArrayType): ArrayType => {};
 `,
   },
   {
-    header: '对象拷贝',
+    header: '数组深拷贝',
+    key: 'arrayDeepClone',
+    content: `/**
+ * @desc 对给定数组，返回这个数组的深拷贝
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Array
+ * @typedef {(string | number | boolean | undefined | null)} BaseType
+ * @typedef {Array<BaseType | ArrayType>} ArrayType
+ * @param {ArrayType} array
+ * @returns {ArrayType} 传入数组的深拷贝
+ */
+const arrayClone = (array) => {};
+`,
+    tsContent: `/**
+ * @desc 对给定数组，返回这个数组的深拷贝
+ * @desc 数组元素只可能是 String、Number、Boolean、Undefined、Null、Array
+ */
+type BaseType = string | number | boolean | undefined | null;
+type ArrayType = (BaseType | ArrayType)[]
+
+const arrayClone = (array: ArrayType): ArrayType => {};
+`,
+  },
+  {
+    header: '对象浅拷贝',
     key: 'objectClone',
     content: `/**
- * @desc 对给定对象，返回这个对象的浅拷贝或深拷贝
+ * @desc 对给定对象，返回这个对象的浅拷贝
  * @desc 对象键只可能是 String，值只可能是 String、Number、Boolean、Undefined、Null、Object
  * @typedef {(string | number | boolean | undefined | null)} BaseType
  * @typedef {{ [propName: string]: BaseType | ObjectType }} ObjectType
  * @param {ObjectType} object
- * @returns {ObjectType} 传入对象的浅拷贝或深拷贝
+ * @returns {ObjectType} 传入对象的浅拷贝
  */
 const objectClone = (object) => {};
 `,
     tsContent: `/**
- * @desc 对给定对象，返回这个对象的浅拷贝或深拷贝
+ * @desc 对给定对象，返回这个对象的浅拷贝
+ * @desc 对象键只可能是 String，值只可能是 String、Number、Boolean、Undefined、Null、Object
+ */
+type BaseType = string | number | boolean | undefined | null;
+type ObjectType = { [propName: string]: BaseType | ObjectType };
+
+const objectClone = (object: ObjectType): ObjectType => {};
+`,
+  },
+  {
+    header: '对象深拷贝',
+    key: 'objectDeepClone',
+    content: `/**
+ * @desc 对给定对象，返回这个对象的深拷贝
+ * @desc 对象键只可能是 String，值只可能是 String、Number、Boolean、Undefined、Null、Object
+ * @typedef {(string | number | boolean | undefined | null)} BaseType
+ * @typedef {{ [propName: string]: BaseType | ObjectType }} ObjectType
+ * @param {ObjectType} object
+ * @returns {ObjectType} 传入对象的深拷贝
+ */
+const objectClone = (object) => {};
+`,
+    tsContent: `/**
+ * @desc 对给定对象，返回这个对象的深拷贝
  * @desc 对象键只可能是 String，值只可能是 String、Number、Boolean、Undefined、Null、Object
  */
 type BaseType = string | number | boolean | undefined | null;
