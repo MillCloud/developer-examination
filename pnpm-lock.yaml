@@ -7,7 +7,7 @@ specifiers:
   '@babel/eslint-parser': ~7.15.0
   '@commitlint/cli': ~13.1.0
   '@iconify/react': ~3.0.1
-  '@modyqyw/fabric': ~3.0.3
+  '@modyqyw/fabric': ~3.1.1
   '@types/file-saver': ~2.0.3
   '@types/node': ~16.7.1
   '@types/react': ~17.0.19
@@ -49,7 +49,7 @@ specifiers:
   vite: ~2.5.0
   vite-plugin-pages: ~0.17.4
   vite-plugin-style-import: ~1.1.1
-  vite-plugin-windicss: ~1.2.7
+  vite-plugin-windicss: ~1.2.8
   vite-react-jsx: ~1.1.2
   vite-tsconfig-paths: ~3.3.13
   windicss: ~3.1.7
@@ -75,7 +75,7 @@ devDependencies:
   '@babel/core': 7.15.0
   '@babel/eslint-parser': 7.15.0_@babel+core@7.15.0+eslint@7.32.0
   '@commitlint/cli': 13.1.0
-  '@modyqyw/fabric': 3.0.3_324d7c6ac8f303ec77bc1a6e2a48bc4f
+  '@modyqyw/fabric': 3.1.1_324d7c6ac8f303ec77bc1a6e2a48bc4f
   '@types/file-saver': 2.0.3
   '@types/node': 16.7.1
   '@types/react': 17.0.19
@@ -106,7 +106,7 @@ devDependencies:
   vite: 2.5.0
   vite-plugin-pages: 0.17.4_7fe3aad99197253b81205fb92dfdbad3
   vite-plugin-style-import: 1.1.1_vite@2.5.0
-  vite-plugin-windicss: 1.2.7_vite@2.5.0
+  vite-plugin-windicss: 1.2.8_vite@2.5.0
   vite-react-jsx: 1.1.2_vite@2.5.0
   vite-tsconfig-paths: 3.3.13_vite@2.5.0
 
@@ -658,8 +658,8 @@ packages:
     resolution: {integrity: sha512-yUskSSR80JzRSWcqNsBAG9AN802XzZgHsex8mTOkMLYcPQC3fk1XwK17ulnY5vf692OafhGCAMccR8TWKFaGdw==}
     dev: false
 
-  /@modyqyw/fabric/3.0.3_324d7c6ac8f303ec77bc1a6e2a48bc4f:
-    resolution: {integrity: sha512-gauxeEe4sLDA1HthT63jwJgLE9CmsZ4nZ2Gz/2TJuHqByaj0Fa6HEaJ8sqOSnudLvEmnikcr9uKKHgivKz5OKg==}
+  /@modyqyw/fabric/3.1.1_324d7c6ac8f303ec77bc1a6e2a48bc4f:
+    resolution: {integrity: sha512-B2Pxo9zwKAzn4V3ztTY9N2WOtQ9HIxvMwEeBzxEcnSiyQq+JtHnwcEjzMcgerr8VNMy3PvTrg9dq9lO5N2BevQ==}
     engines: {node: ^12.22.5 || ^14.17.5 || ^16.6.2, npm: ^6.14.14 || ^7.20.3}
     hasBin: true
     dependencies:
@@ -672,7 +672,7 @@ packages:
       commander: 8.1.0
       eslint-config-airbnb: 18.2.1_2193e7dbb973f8a35f596761564cb3bc
       eslint-config-airbnb-base: 14.2.1_dd24990a2f914d6f3397930dfc8171b2
-      eslint-config-airbnb-typescript: 12.3.1_297ec85a6d7719dcaec5af9a52c1976e
+      eslint-config-airbnb-typescript: 13.0.1_5a932766612959030cbbaf3bc45e8537
       eslint-config-next: 11.1.0_eslint@7.32.0+typescript@4.3.5
       eslint-config-prettier: 8.3.0_eslint@7.32.0
       eslint-import-resolver-node: 0.3.6
@@ -1212,8 +1212,8 @@ packages:
     resolution: {integrity: sha512-j2j1MRmjalVKr3YBTxl/BClSIc8UQ8NnPpLYclxerK65JIowI4O7n8O8lElveEtEoHxy1d7BelPUDI0Q4bumqg==}
     dev: true
 
-  /@windicss/config/1.2.7:
-    resolution: {integrity: sha512-XpH/dkXWk2LGygHzHBWWEW/yGcLqhpFFN2jo+zMeWZ1ggBzndQQzBHqHGQHcr6U6v3PoBuOz1prVWgUmQxn9eQ==}
+  /@windicss/config/1.2.8:
+    resolution: {integrity: sha512-v9vyIiG8GYUTYo874ExlVu1i6vlsWo4RFZWiDGfPKdN7GBRCcJcEV+X+j3AZPPIsx5JvD5TXQlDvkbYIqYWYbQ==}
     dependencies:
       debug: 4.3.2
       jiti: 1.11.0
@@ -1244,11 +1244,11 @@ packages:
     resolution: {integrity: sha512-+cqv1pEmaNPITeBJ/lO6tc8IjBzRhQ+V9G8r249MMXivYoxUO4DtModBrRGHVvBgsYZgPXDsIv2jqtxc4NqYEg==}
     dev: true
 
-  /@windicss/plugin-utils/1.2.7:
-    resolution: {integrity: sha512-aNQhd1nEjkVsCHmzq0+4VGTmovOGGfPnH2hspH4YuDxMDhQ/99VrBdyk7irngWJjedjHB3+UYCSYWpY5a+2Hbg==}
+  /@windicss/plugin-utils/1.2.8:
+    resolution: {integrity: sha512-JwnFMJMCX/+Re4iItozvbWC3yz/7WJNOJJkgDKQ9X5Ran1sfNjx9m3LCijsYLf0MULCplZJIh/HzdxjxZMNFUA==}
     dependencies:
       '@antfu/utils': 0.2.4
-      '@windicss/config': 1.2.7
+      '@windicss/config': 1.2.8
       debug: 4.3.2
       fast-glob: 3.2.7
       magic-string: 0.25.7
@@ -1594,7 +1594,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001251
       colorette: 1.3.0
-      electron-to-chromium: 1.3.815
+      electron-to-chromium: 1.3.816
       escalade: 3.1.1
       node-releases: 1.1.75
     dev: true
@@ -2248,8 +2248,8 @@ packages:
     resolution: {integrity: sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=}
     dev: true
 
-  /electron-to-chromium/1.3.815:
-    resolution: {integrity: sha512-2QaE8L5l3BDf82ZXcm0TpWOPoCVUwrp3lKiYzgUbdhRAO2sW60ZdKS5T8yq4r7y1ZeiKJXnf5u8n9u3ldnj5Bw==}
+  /electron-to-chromium/1.3.816:
+    resolution: {integrity: sha512-/AvJPIJldO0NkwkfpUD7u1e4YEGRFBQpFuvl9oGCcVgWOObsZB1loxVGeVUJB9kmvfsBUUChPYdgRzx6+AKNyg==}
     dev: true
 
   /emoji-regex/7.0.3:
@@ -2407,20 +2407,14 @@ packages:
       object.entries: 1.1.4
     dev: true
 
-  /eslint-config-airbnb-typescript/12.3.1_297ec85a6d7719dcaec5af9a52c1976e:
-    resolution: {integrity: sha512-ql/Pe6/hppYuRp4m3iPaHJqkBB7dgeEmGPQ6X0UNmrQOfTF+dXw29/ZjU2kQ6RDoLxaxOA+Xqv07Vbef6oVTWw==}
+  /eslint-config-airbnb-typescript/13.0.1_5a932766612959030cbbaf3bc45e8537:
+    resolution: {integrity: sha512-n7fGBDNV3xSKbWDUES2FfsNAJhuqADcwzshX6ci6qoszUnH6p4dzrLnSFqYkw5Sn7M+aarp2BTf7JDOK88M+bg==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^4.4.1
+      '@typescript-eslint/parser': ^4.4.1
     dependencies:
+      '@typescript-eslint/eslint-plugin': 4.29.3_fd14c0002fbbfb85b8a0070d0dffb93d
       '@typescript-eslint/parser': 4.29.3_eslint@7.32.0+typescript@4.3.5
-      eslint-config-airbnb: 18.2.1_2193e7dbb973f8a35f596761564cb3bc
-      eslint-config-airbnb-base: 14.2.1_dd24990a2f914d6f3397930dfc8171b2
-    transitivePeerDependencies:
-      - eslint
-      - eslint-plugin-import
-      - eslint-plugin-jsx-a11y
-      - eslint-plugin-react
-      - eslint-plugin-react-hooks
-      - supports-color
-      - typescript
     dev: true
 
   /eslint-config-airbnb/18.2.1_2193e7dbb973f8a35f596761564cb3bc:
@@ -7322,12 +7316,12 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-windicss/1.2.7_vite@2.5.0:
-    resolution: {integrity: sha512-JgIGsH5HPaz3ghDRhhLeF8VZQMUE+R0jD9u8sbne5KdBBa208r0IuTcx73V7CPcmsu7KABG6rfLgST9ffVoiDA==}
+  /vite-plugin-windicss/1.2.8_vite@2.5.0:
+    resolution: {integrity: sha512-KLoFfsEh5RAyw2OjW+lrIdgkRAMa9KM1sKPYf8pYgVIj4PL6xBbJlbvWOZnZdW1rFjLtF3KzPT35HEmj6MV8XQ==}
     peerDependencies:
       vite: ^2.0.1
     dependencies:
-      '@windicss/plugin-utils': 1.2.7
+      '@windicss/plugin-utils': 1.2.8
       chalk: 4.1.2
       debug: 4.3.2
       vite: 2.5.0
