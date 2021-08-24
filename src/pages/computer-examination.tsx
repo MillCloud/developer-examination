@@ -41,9 +41,11 @@ const ComputerExamination = memo(() => (
   <Typography>
     <Title>工具方法</Title>
     <Paragraph>
-      你需要使用原生 JavaScript / TypeScript 给出尽可能简洁的实现。
+      你需要使用原生 JavaScript / TypeScript
+      给出尽可能简洁的实现，并为每一个题目提交一个单独的文件。
     </Paragraph>
-    <Paragraph>请尽力完成。</Paragraph>
+    <Paragraph>你可以直接下载对应的文件并修改。</Paragraph>
+    <Paragraph>请完成所有你会的题目。</Paragraph>
     <Paragraph>
       <Collapse>
         {utils.map((util) => (
@@ -121,17 +123,12 @@ ${util.tsContent ?? util.content}
     </Paragraph>
     <Title>小型项目</Title>
     <Paragraph>
-      你需要使用以下其中一种技术栈给出尽可能简洁的代码实现。
+      你需要使用以下其中一种技术栈给出尽可能简洁的代码实现，并为每一个题目提交一个单独的项目。
     </Paragraph>
     <Paragraph>
       <ul>
         <li>
-          <Text code>Vue2 Options API + JavaScript</Text>
-        </li>
-        <li>
-          <Text code>
-            Vue2 / Vue3 Composition API + JavaScript / TypeScript
-          </Text>
+          <Text code>Vue2 / Vue3 Options API / Composition API</Text>
         </li>
         <li>
           <Text code>React17 + Hooks</Text>

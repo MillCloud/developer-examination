@@ -34,7 +34,7 @@ const Index = memo(() => (
       </ul>
     </Paragraph>
     <Paragraph>
-      注意：你可以任意搜索基本资料（
+      你可以任意搜索基本资料（
       <Link href="https://cn.vuejs.org/" target="_blank">
         Vue2 官网
       </Link>
@@ -50,9 +50,11 @@ const Index = memo(() => (
       <Link href="https://developer.mozilla.org/" target="_blank">
         MDN
       </Link>{' '}
-      以及你使用到的周边库的文档等）。我们想看到的是你独立思考的结果，如果做不出来，大大方方地承认也好。
+      以及你使用到的周边库的文档等），也可以去查看我们给出的参考链接的源码。
     </Paragraph>
-    <Paragraph>一经发现抄袭，我们将会直接拒绝你。</Paragraph>
+    <Paragraph strong>
+      我们想看到的是你独立思考的结果，如果做不出来，大大方方地承认也很好。我们不接受抄袭行为，一经发现直接拒绝。
+    </Paragraph>
     <Paragraph>
       机试不是必须的环节，你也可以选择不接受机试，那样我们将根据笔试和面试来判断。
     </Paragraph>
