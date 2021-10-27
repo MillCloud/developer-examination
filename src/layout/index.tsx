@@ -1,15 +1,7 @@
 import { memo, useMemo } from 'react';
-import {
-  Layout as ALayout,
-  Typography,
-  Image,
-  Row,
-  Menu,
-  BackTop,
-  Space,
-} from 'antd';
+import { Layout as ALayout, Typography, Image, Row, Menu, BackTop, Space } from 'antd';
 import { useHistory, useLocation } from 'react-router-dom';
-import pkg from '@@/package.json';
+import pkg from '@/../package.json';
 import logoUrl from '@/assets/logo.png';
 
 const { Header, Content, Footer } = ALayout;
@@ -30,10 +22,7 @@ const Layout = memo(({ children }) => {
   const location = useLocation();
   const history = useHistory();
   const selectedKeys = useMemo(
-    () =>
-      routes
-        .filter((route) => route.path === location.pathname)
-        .map((route) => route.name),
+    () => routes.filter((route) => route.path === location.pathname).map((route) => route.name),
     [location],
   );
   return (
@@ -46,12 +35,7 @@ const Layout = memo(({ children }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              src={logoUrl}
-              preview={false}
-              alt="MillCloud"
-              className="w-20"
-            />
+            <Image src={logoUrl} preview={false} alt="MillCloud" className="w-20" />
           </a>
           <Title level={5} className="!text-white !mb-0 mx-4 flex-none">
             前端测试
@@ -73,29 +57,17 @@ const Layout = memo(({ children }) => {
       <Footer>
         <Row justify="center">v{pkg.version}</Row>
         <Row justify="center">
-          <Space>
-            <Link
-              href={`https://github.com/MillCloud/${pkg.name}`}
-              target="_blank"
-            >
+          <Space size="large">
+            <Link href={`https://github.com/MillCloud/${pkg.name}`} target="_blank">
               Github Repo
             </Link>
-            <Link
-              href={`https://gitee.com/MillCloud/${pkg.name}`}
-              target="_blank"
-            >
+            <Link href={`https://gitee.com/MillCloud/${pkg.name}`} target="_blank">
               Gitee Repo
             </Link>
-            <Link
-              href={`https://millcloud.github.io/${pkg.name}/`}
-              target="_blank"
-            >
+            <Link href={`https://millcloud.github.io/${pkg.name}/`} target="_blank">
               Github Page
             </Link>
-            <Link
-              href={`https://millcloud.gitee.io/${pkg.name}/`}
-              target="_blank"
-            >
+            <Link href={`https://millcloud.gitee.io/${pkg.name}/`} target="_blank">
               Gitee Page
             </Link>
           </Space>

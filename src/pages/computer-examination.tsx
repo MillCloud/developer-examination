@@ -11,17 +11,9 @@ const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
 const { TabPane } = Tabs;
 
-const Code = ({
-  className,
-  children,
-}: {
-  className: string;
-  children: ReactNode;
-}) => (
+const Code = ({ className, children }: { className: string; children: ReactNode }) => (
   <SyntaxHighlighter
-    language={
-      className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'
-    }
+    language={className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'}
     style={materialDark}
   >
     {children}
@@ -57,30 +49,17 @@ const ComputerExamination = memo(() => (
                 <Tooltip title="获取 JavaScript 文件">
                   <Button
                     shape="circle"
-                    icon={
-                      <Icon
-                        icon="mdi:language-javascript"
-                        className="anticon mx-auto"
-                      />
-                    }
+                    icon={<Icon icon="mdi:language-javascript" className="anticon mx-auto" />}
                     onClick={(event) => {
                       event.stopPropagation();
-                      fileSaver.saveAs(
-                        new Blob([util.content]),
-                        `${util.key}.js`,
-                      );
+                      fileSaver.saveAs(new Blob([util.content]), `${util.key}.js`);
                     }}
                   />
                 </Tooltip>
                 <Tooltip title="获取 TypeScript 文件">
                   <Button
                     shape="circle"
-                    icon={
-                      <Icon
-                        icon="mdi:language-typescript"
-                        className="anticon mx-auto"
-                      />
-                    }
+                    icon={<Icon icon="mdi:language-typescript" className="anticon mx-auto" />}
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(
@@ -138,9 +117,7 @@ ${util.tsContent ?? util.content}
     <Paragraph>
       在没有具体要求的部分（比如页面设计等），你可以自由发挥。如果题目内没有限制，你可以任意使用你常用的周边库。
     </Paragraph>
-    <Paragraph>
-      请选择至少 1 个、最多 3 个尽力完成，并写出你实现时的相关思考🤔。
-    </Paragraph>
+    <Paragraph>请选择至少 1 个、最多 3 个尽力完成，并写出你实现时的相关思考🤔。</Paragraph>
     <Paragraph>
       <Collapse>
         {demos.map((demo) => (

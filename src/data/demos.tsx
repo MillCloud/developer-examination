@@ -14,10 +14,7 @@ export const demos = [
       <ul>
         <li>
           使用{' '}
-          <Link
-            href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-            target="_blank"
-          >
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">
             fetch
           </Link>{' '}
           请求{' '}
@@ -28,19 +25,15 @@ export const demos = [
             Github API
           </Link>{' '}
           或{' '}
-          <Link
-            href="https://gitee.com/api/v5/swagger#/getV5SearchRepositories"
-            target="_blank"
-          >
+          <Link href="https://gitee.com/api/v5/swagger#/getV5SearchRepositories" target="_blank">
             Gitee API
           </Link>{' '}
-          获取 <Text code>Vue</Text> 或 <Text code>React</Text>{' '}
-          相关仓库并显示拥有者、仓库名、Star 和 Fork。
+          获取 <Text code>Vue</Text> 或 <Text code>React</Text> 相关仓库并显示拥有者、仓库名、Star
+          和 Fork。
         </li>
         <li>分页功能：显示当前页和总页数，允许切页查看不同页的数据。</li>
         <li>
-          缓存功能：缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义，默认为
-          5。
+          缓存功能：缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义，默认为 5。
         </li>
         <li>
           参考：
@@ -108,24 +101,16 @@ export const demos = [
       <ul>
         <li>
           满足{' '}
-          <Link
-            href="https://baike.baidu.com/item/%E6%89%AB%E9%9B%B7/12543"
-            target="_blank"
-          >
+          <Link href="https://baike.baidu.com/item/%E6%89%AB%E9%9B%B7/12543" target="_blank">
             扫雷
           </Link>{' '}
           规则。
         </li>
-        <li>
-          可以选择难度，初级 9x9 10 雷，中级 16x16 40 雷，高级 16x30 99 雷。
-        </li>
+        <li>可以选择难度，初级 9x9 10 雷，中级 16x16 40 雷，高级 16x30 99 雷。</li>
         <li>可以自定义难度，即允许自定义行、列、雷数量。</li>
         <li>
           参考：
-          <Link
-            href="https://next-mine-sweeper-demo.vercel.app"
-            target="_blank"
-          >
+          <Link href="https://next-mine-sweeper-demo.vercel.app" target="_blank">
             next-mine-sweeper-demo
           </Link>
         </li>
@@ -170,10 +155,7 @@ export const demos = [
       <ul>
         <li>
           满足{' '}
-          <Link
-            href="https://baike.baidu.com/item/2048/13383511"
-            target="_blank"
-          >
+          <Link href="https://baike.baidu.com/item/2048/13383511" target="_blank">
             2048
           </Link>{' '}
           规则。
@@ -185,10 +167,7 @@ export const demos = [
             vue-2048
           </Link>
           ，
-          <Link
-            href="http://ivanvergiliev.github.io/2048-react/"
-            target="_blank"
-          >
+          <Link href="http://ivanvergiliev.github.io/2048-react/" target="_blank">
             react-2048
           </Link>
         </li>
@@ -206,17 +185,11 @@ export const demos = [
         <li>2 种状态：可用、不可用。</li>
         <li>
           可参考{' '}
-          <Link
-            href="https://getbootstrap.com/docs/5.1/components/buttons/"
-            target="_blank"
-          >
+          <Link href="https://getbootstrap.com/docs/5.1/components/buttons/" target="_blank">
             bootstrap v5 button
           </Link>
           ，
-          <Link
-            href="https://element-plus.org/#/zh-CN/component/button"
-            target="_blank"
-          >
+          <Link href="https://element-plus.org/#/zh-CN/component/button" target="_blank">
             element-plus button
           </Link>{' '}
           和{' '}

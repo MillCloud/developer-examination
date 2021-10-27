@@ -19,24 +19,11 @@
     "newLine": "lf",
     "noUnusedLocals": true,
     "baseUrl": ".",
+    "sourceMap": false,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./**/*.js",
-    "./**/*.jsx",
-    "./**/*.vue",
-    "./**/.*.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "dist-ssr",
-    "dist_electron",
-    "out",
-    "unpackage"
-  ]
+  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx", "./**/*.vue", "./**/.*.js"],
+  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
 }
