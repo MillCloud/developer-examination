@@ -8,7 +8,7 @@
     "commit": "cz",
     "dev": "vite",
     "postinstall": "pnpm run clean",
-    "lint": "pnpm run lint:eslint && pnpm run lint:stylelint && pnpm run lint:markdownlint",
+    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint && pnpm run lint:stylelint",
     "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:stylelint": "stylelint \"./**/*.{css,less,scss,vue}\" --fix --allow-empty-input --ignore-path=.gitignore",
