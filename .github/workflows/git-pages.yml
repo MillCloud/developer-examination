@@ -1,5 +1,5 @@
 # https://vuepress.github.io/zh/guide/deployment.html#github-pages
-name: docs
+name: git-pages
 
 on:
   push:
