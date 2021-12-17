@@ -15,39 +15,10 @@ import {
   magenta as antdMagenta,
   grey as antdGray,
 } from '@ant-design/colors';
-import aspectRatioPlugin from 'windicss/plugin/aspect-ratio';
-import formsPlugin from 'windicss/plugin/forms';
-import filtersPlugin from 'windicss/plugin/filters';
-import lineClampPlugin from 'windicss/plugin/line-clamp';
-import scrollSnapPlugin from 'windicss/plugin/scroll-snap';
-import typographyPlugin from 'windicss/plugin/typography';
-// @ts-ignore
-import animationsPlugin from '@windicss/plugin-animations';
-// @ts-ignore
-import scrollbarPlugin from '@windicss/plugin-scrollbar';
-// @ts-ignore
-import questionMarkPlugin from '@windicss/plugin-question-mark';
-// @ts-ignore
-import heropatternsPlugin from '@windicss/plugin-heropatterns';
-// @ts-ignore
-import interactionVariantsPlugin from '@windicss/plugin-interaction-variants';
 
 export default defineConfig({
   preflight: false,
   attributify: true,
-  plugins: [
-    aspectRatioPlugin,
-    formsPlugin,
-    filtersPlugin,
-    lineClampPlugin,
-    scrollSnapPlugin,
-    typographyPlugin,
-    animationsPlugin,
-    scrollbarPlugin,
-    questionMarkPlugin,
-    heropatternsPlugin,
-    interactionVariantsPlugin,
-  ],
   theme: {
     extend: {
       screens: {
@@ -70,6 +41,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdRed.primary ?? antdRed[5],
         },
         orange: {
           ...(windiColors.orange as Record<string | number, string>),
@@ -80,6 +52,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdOrange.primary ?? antdOrange[5],
         },
         yellow: {
           ...(windiColors.yellow as Record<string | number, string>),
@@ -90,6 +63,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdYellow.primary ?? antdYellow[5],
         },
         amber: windiColors.amber,
         lime: {
@@ -101,6 +75,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdLime.primary ?? antdLime[5],
         },
         green: {
           ...(windiColors.green as Record<string | number, string>),
@@ -111,6 +86,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdGreen.primary ?? antdGreen[5],
         },
         emerald: windiColors.emerald,
         teal: windiColors.teal,
@@ -123,8 +99,8 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdCyan.primary ?? antdCyan[5],
         },
-        lightBlue: windiColors.lightBlue,
         blue: {
           ...(windiColors.blue as Record<string | number, string>),
           ...antdBlue.reduce(
@@ -134,6 +110,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdBlue.primary ?? antdBlue[5],
         },
         indigo: windiColors.indigo,
         purple: {
@@ -145,6 +122,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdPurple.primary ?? antdPurple[5],
         },
         violet: windiColors.violet,
         fuchsia: windiColors.fuchsia,
@@ -157,6 +135,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdGray.primary ?? antdGray[6],
         },
         blueGray: windiColors.blueGray,
         coolGray: windiColors.coolGray,
@@ -175,6 +154,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdVolcano.primary ?? antdVolcano[5],
         },
         gold: {
           ...antdGold.reduce(
@@ -184,6 +164,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdGold.primary ?? antdGold[5],
         },
         geekBlue: {
           ...antdGeekBlue.reduce(
@@ -193,6 +174,7 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdGeekBlue.primary ?? antdGeekBlue[5],
         },
         magenta: {
           ...antdMagenta.reduce(
@@ -202,6 +184,67 @@ export default defineConfig({
             }),
             {},
           ),
+          '': antdMagenta.primary ?? antdMagenta[5],
+        },
+        primary: {
+          ...antdBlue.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdBlue.primary ?? antdBlue[5],
+        },
+        success: {
+          ...antdGreen.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdGreen.primary ?? antdGreen[5],
+        },
+        warning: {
+          ...antdGold.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdGold.primary ?? antdGold[5],
+        },
+        error: {
+          ...antdRed.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdRed.primary ?? antdRed[5],
+        },
+        danger: {
+          ...antdRed.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdRed.primary ?? antdRed[5],
+        },
+        info: {
+          ...antdBlue.reduce(
+            (acc, cur, idx) => ({
+              ...acc,
+              [idx + 1]: cur,
+            }),
+            {},
+          ),
+          '': antdBlue.primary ?? antdBlue[5],
         },
       },
     },

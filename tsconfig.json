@@ -24,6 +24,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx", "./**/*.vue", "./**/.*.js"],
+  "include": [
+    "./**/.*.js",
+    "./**/*.js",
+    "./**/*.jsx",
+    "./**/.*.ts",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue"
+  ],
   "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
 }
