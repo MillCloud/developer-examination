@@ -35,12 +35,6 @@ export const demos = [
         <li>
           缓存功能：缓存最近使用几页的数据，再次使用时直接读取缓存数据，具体页数可自定义，默认为 5。
         </li>
-        <li>
-          参考：
-          <Link href="https://next-fetch-demo.vercel.app" target="_blank">
-            next-fetch-demo
-          </Link>
-        </li>
       </ul>
     ),
   },
@@ -85,12 +79,6 @@ export const demos = [
         <li>输入标题、备注和优先级添加备忘。</li>
         <li>允许筛选标题或内容。</li>
         <li>自动根据优先级排序</li>
-        <li>
-          参考：
-          <Link href="https://vue-memos-demo.vercel.app" target="_blank">
-            vue-memos-demo
-          </Link>
-        </li>
       </ul>
     ),
   },
