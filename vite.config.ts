@@ -20,6 +20,7 @@ export default defineConfig({
       'react-router',
       'react-router-dom',
       'react-syntax-highlighter',
+      'react-syntax-highlighter/dist/esm/styles/prism',
     ],
   },
   plugins: [React(), TsconfigPaths(), WindiCSS(), Pages()],

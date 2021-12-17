@@ -6,7 +6,7 @@
     "build": "tsc && vite build --base=/developer-examination/",
     "clean": "rimraf ./node_modules/.vite",
     "commit": "cz",
-    "dev": "vite",
+    "dev": "vite --host",
     "postinstall": "pnpm run clean",
     "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint && pnpm run lint:stylelint",
     "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
