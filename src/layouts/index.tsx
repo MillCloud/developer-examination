@@ -59,16 +59,16 @@ const Layout = memo(({ children }: { children: React.ReactNode }) => {
         <Row justify="center">v{pkg.version}</Row>
         <Row justify="center">
           <Space size="large">
-            <Link href={`https://github.com/MillCloud/${pkg.name}`} target="_blank">
+            <Link href={`https://github.com/${pkg.author}/${pkg.name}`} target="_blank">
               Github Repo
             </Link>
-            <Link href={`https://gitee.com/MillCloud/${pkg.name}`} target="_blank">
+            <Link href={`https://gitee.com/${pkg.author}/${pkg.name}`} target="_blank">
               Gitee Repo
             </Link>
-            <Link href={`https://millcloud.github.io/${pkg.name}/`} target="_blank">
+            <Link href={`https://${pkg.author}.github.io/${pkg.name}/`} target="_blank">
               Github Page
             </Link>
-            <Link href={`https://millcloud.gitee.io/${pkg.name}/`} target="_blank">
+            <Link href={`https://${pkg.author}.gitee.io/${pkg.name}/`} target="_blank">
               Gitee Page
             </Link>
           </Space>

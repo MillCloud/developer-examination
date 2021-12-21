@@ -2,6 +2,7 @@
   "name": "developer-examination",
   "version": "1.7.4",
   "private": true,
+  "author": "MillCloud",
   "scripts": {
     "build": "tsc && vite build --base=/developer-examination/",
     "commit": "cz",
