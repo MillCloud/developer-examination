@@ -52,7 +52,7 @@ const ComputerExamination = memo(() => (
                 <Tooltip title="获取 JavaScript 文件">
                   <Button
                     shape="circle"
-                    icon={<Icon icon="mdi:language-javascript" className="anticon mx-auto" />}
+                    icon={<Icon icon="mdi:language-javascript" className="mx-auto anticon" />}
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(new Blob([util.content]), `${util.key}.js`);
@@ -62,7 +62,7 @@ const ComputerExamination = memo(() => (
                 <Tooltip title="获取 TypeScript 文件">
                   <Button
                     shape="circle"
-                    icon={<Icon icon="mdi:language-typescript" className="anticon mx-auto" />}
+                    icon={<Icon icon="mdi:language-typescript" className="mx-auto anticon" />}
                     onClick={(event) => {
                       event.stopPropagation();
                       fileSaver.saveAs(
