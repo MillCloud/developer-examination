@@ -11,24 +11,26 @@ const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
 const { TabPane } = Tabs;
 
-const Code = memo(({ className, children }: { className: string; children: ReactNode }) => (
-  <SyntaxHighlighter
-    language={className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'}
-    style={materialDark}
-  >
-    {children}
-  </SyntaxHighlighter>
-));
+const Code = function Code({ className, children }: { className: string; children: ReactNode }) {
+  return (
+    <SyntaxHighlighter
+      language={className?.startsWith('lang-') ? className.replace('lang-', '') : 'text'}
+      style={materialDark}
+    >
+      {children}
+    </SyntaxHighlighter>
+  );
+};
 
-const Pre = memo(({ children, ...props }: { children: ReactNode }) =>
+const Pre = function Pre({ children, ...props }: { children: ReactNode }) {
   // @ts-ignore
-  children?.type === 'code' ? (
+  return children?.type === 'code' ? (
     // @ts-ignore
     Code(children.props)
   ) : (
     <pre {...props}>{children}</pre>
-  ),
-);
+  );
+};
 
 const ComputerExamination = memo(() => (
   <Typography>
