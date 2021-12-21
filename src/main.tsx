@@ -22,7 +22,7 @@ function App() {
 ReactDOM.render(
   <React.StrictMode>
     <ConfigProvider locale={zhCN}>
-      <HashRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Layout>
           <App />
         </Layout>
