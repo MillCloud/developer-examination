@@ -96,12 +96,6 @@ export const demos = [
         </li>
         <li>可以选择难度，初级 9x9 10 雷，中级 16x16 40 雷，高级 16x30 99 雷。</li>
         <li>可以自定义难度，即允许自定义行、列、雷数量。</li>
-        <li>
-          参考：
-          <Link href="https://next-mine-sweeper-demo.vercel.app" target="_blank">
-            next-mine-sweeper-demo
-          </Link>
-        </li>
       </ul>
     ),
   },
