@@ -43,7 +43,7 @@ const Layout = memo(({ children }: { children: React.ReactNode }) => {
           <Menu
             theme="dark"
             mode="horizontal"
-            className="flex-none"
+            className="flex-auto"
             selectedKeys={selectedKeys}
             onClick={({ key }) => {
               navigate(`/${key}`);
