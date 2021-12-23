@@ -1,28 +1,12 @@
 {
+  "extends": "./node_modules/@modyqyw/fabric/tsconfig.base.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "baseUrl": "./",
     "jsx": "react-jsx",
-    "types": ["vite/client", "vite-plugin-pages/client-react"],
-    "newLine": "lf",
-    "noUnusedLocals": true,
-    "baseUrl": ".",
-    "sourceMap": false,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vite/client", "vite-plugin-pages/client-react"]
   },
   "include": [
     "./**/.*.js",
@@ -33,5 +17,5 @@
     "./**/*.tsx",
     "./**/*.vue"
   ],
-  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
+  "exclude": [".cache", ".temp", ".tmp", "dist*", "node_modules"]
 }
