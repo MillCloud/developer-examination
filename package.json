@@ -24,7 +24,7 @@
     "@iconify/react": "~3.1.0",
     "@modyqyw/utils": "~2.0.1",
     "ahooks": "~3.0.8",
-    "antd": "~4.17.4",
+    "antd": "~4.18.0",
     "browser-update": "~3.3.35",
     "file-saver": "~2.0.5",
     "markdown-to-jsx": "~7.1.5",
