@@ -113,11 +113,22 @@
             :sub-title="partOneContentErrors.join('<br/>')"
           />
           <el-collapse v-else accordion>
-            <el-collapse-item
-              v-for="(nameItem, nameIndex) of partOneNames"
-              :key="nameItem.value"
-              :title="nameItem.label"
-            >
+            <el-collapse-item v-for="(nameItem, nameIndex) of partOneNames" :key="nameItem.value">
+              <template #title>
+                <el-row align="middle" justify="center" class="w-full">
+                  <span>{{ nameItem.label }}</span>
+                  <div class="flex-auto" />
+                  <el-button
+                    v-for="extensionItem of partOneExtensions"
+                    :key="extensionItem.value"
+                    class="flex items-center justify-center"
+                    circle
+                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                  >
+                    <Icon :icon="extensionItem.icon" class="el-icon" />
+                  </el-button>
+                </el-row>
+              </template>
               <el-tabs v-if="partOneExtensions.length > 1">
                 <el-tab-pane
                   v-for="(extensionItem, extensionIndex) of partOneExtensions"
@@ -170,11 +181,22 @@
             :sub-title="partTwoContentErrors.join('<br/>')"
           />
           <el-collapse v-else accordion>
-            <el-collapse-item
-              v-for="(nameItem, nameIndex) of partTwoNames"
-              :key="nameItem.value"
-              :title="nameItem.label"
-            >
+            <el-collapse-item v-for="(nameItem, nameIndex) of partTwoNames" :key="nameItem.value">
+              <template #title>
+                <el-row align="middle" justify="center" class="w-full">
+                  <span>{{ nameItem.label }}</span>
+                  <div class="flex-auto" />
+                  <el-button
+                    v-for="extensionItem of partTwoExtensions"
+                    :key="extensionItem.value"
+                    class="flex items-center justify-center"
+                    circle
+                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                  >
+                    <Icon :icon="extensionItem.icon" class="el-icon" />
+                  </el-button>
+                </el-row>
+              </template>
               <el-tabs v-if="partTwoExtensions.length > 1">
                 <el-tab-pane
                   v-for="(extensionItem, extensionIndex) of partTwoExtensions"
@@ -219,11 +241,22 @@
             :sub-title="partThreeContentErrors.join('<br/>')"
           />
           <el-collapse v-else accordion>
-            <el-collapse-item
-              v-for="(nameItem, nameIndex) of partThreeNames"
-              :key="nameItem.value"
-              :title="nameItem.label"
-            >
+            <el-collapse-item v-for="(nameItem, nameIndex) of partThreeNames" :key="nameItem.value">
+              <template #title>
+                <el-row align="middle" justify="center" class="w-full">
+                  <span>{{ nameItem.label }}</span>
+                  <div class="flex-auto" />
+                  <el-button
+                    v-for="extensionItem of partThreeExtensions"
+                    :key="extensionItem.value"
+                    class="flex items-center justify-center"
+                    circle
+                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                  >
+                    <Icon :icon="extensionItem.icon" class="el-icon" />
+                  </el-button>
+                </el-row>
+              </template>
               <el-tabs v-if="partThreeExtensions.length > 1">
                 <el-tab-pane
                   v-for="(extensionItem, extensionIndex) of partThreeExtensions"
@@ -264,7 +297,7 @@
 </template>
 
 <script setup lang="ts">
-// 我知道怎么优化，但是我想拿来让别人练手，所以这里就这样
+// 我知道怎么优化，但是我想拿来让别人回答或练手，所以这里不要改动
 import pkg from '@/../package.json';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import { useQueries } from 'vue-query';
@@ -273,9 +306,11 @@ import { saveAs } from 'file-saver';
 // @ts-ignore
 import MarkdownIt from 'vue3-markdown-it';
 import hljs from 'highlight.js';
+import { Icon } from '@iconify/vue';
 import hljsJavaScript from 'highlight.js/lib/languages/javascript';
 import hljsTypeScript from 'highlight.js/lib/languages/typescript';
 import hljsMarkdown from 'highlight.js/lib/languages/markdown';
+import { debounce } from '@modyqyw/utils';
 
 hljs.registerLanguage('javascript', hljsJavaScript);
 hljs.registerLanguage('typescript', hljsTypeScript);
@@ -292,8 +327,8 @@ const partOneNames = reactive([
   { label: '对象拷贝', value: 'objectClone' },
 ]);
 const partOneExtensions = reactive([
-  { label: 'typescript', value: 'ts' },
-  { label: 'javascript', value: 'js' },
+  { label: 'typescript', value: 'ts', icon: 'logos:typescript-icon' },
+  { label: 'javascript', value: 'js', icon: 'logos:javascript' },
 ]);
 const partTwoNames = reactive([
   { label: 'fetch', value: 'fetch' },
@@ -304,13 +339,14 @@ const partTwoNames = reactive([
   { label: '2048', value: '2048' },
   { label: '按钮', value: 'button' },
 ]);
-const partTwoExtensions = reactive([{ label: 'markdown', value: 'md' }]);
+const partTwoExtensions = reactive([{ label: 'markdown', value: 'md', icon: 'logos:markdown' }]);
 const partThreeNames = reactive([
   { label: '请求', value: 'request' },
   { label: '渲染', value: 'render' },
   { label: '异常', value: 'exception' },
+  { label: '优化', value: 'optimize' },
 ]);
-const partThreeExtensions = reactive([{ label: 'markdown', value: 'md' }]);
+const partThreeExtensions = reactive([{ label: 'markdown', value: 'md', icon: 'logos:markdown' }]);
 
 const fetchContent = async (name: string, extension: string) => {
   try {
@@ -331,10 +367,9 @@ const fetchContent = async (name: string, extension: string) => {
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const downloadContent = (name: string, extension: string) => {
+const downloadContent = debounce((name: string, extension: string) => {
   saveAs(`/${name}.${extension}`, `${name}.${extension}`);
-};
+}, 500);
 
 const partOneContentQueries = useQueries(
   computed(() =>
