@@ -325,6 +325,7 @@ const partOneNames = reactive([
   { label: '生成唯一 ID', value: 'uniqueId' },
   { label: '数组去重', value: 'arrayDeduplication' },
   { label: '对象拷贝', value: 'objectClone' },
+  { label: '对象扁平化', value: 'objectFlat' },
 ]);
 const partOneExtensions = reactive([
   { label: 'typescript', value: 'ts', icon: 'logos:typescript-icon' },
