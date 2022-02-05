@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import browserUpdate from 'browser-update';
 import { VueQueryPlugin } from 'vue-query';
-import ElementPlus, { ElCollapseTransition } from 'element-plus';
+import ElementPlus from 'element-plus';
 import 'element-plus/theme-chalk/index.css';
 import 'element-plus/theme-chalk/display.css';
 import ElementProComponents from 'element-pro-components';
@@ -31,5 +31,4 @@ createApp(App)
   .use(ElementPlus)
   .use(ElementProComponents)
   .use(Markdown)
-  .component(ElCollapseTransition.name, ElCollapseTransition)
   .mount('#app');
