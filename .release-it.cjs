@@ -14,7 +14,7 @@ module.exports = {
     release: false,
   },
   hooks: {
-    'before:init': 'pnpm install && pnpm run lint',
+    // 'before:init': 'pnpm install && pnpm run lint',
   },
 };
 /* eslint-enable no-template-curly-in-string */
