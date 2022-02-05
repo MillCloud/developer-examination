@@ -6,7 +6,7 @@
       >
         <el-row>
           <el-link href="https://www.millcloud.cn" target="_blank" rel="noreferrer">
-            <el-image src="/logo.png" class="mr-2 h-[30px] w-[166px]" />
+            <el-image :src="`${BASE_URL}logo.png`" class="mr-2 h-[30px] w-[166px]" />
           </el-link>
           <h1 class="text-3xl font-bold">前端测试</h1>
         </el-row>
@@ -312,6 +312,9 @@ import hljsTypeScript from 'highlight.js/lib/languages/typescript';
 import hljsMarkdown from 'highlight.js/lib/languages/markdown';
 import { debounce } from '@modyqyw/utils';
 
+// eslint-disable-next-line prefer-destructuring
+const BASE_URL = import.meta.env.BASE_URL;
+
 hljs.registerLanguage('javascript', hljsJavaScript);
 hljs.registerLanguage('typescript', hljsTypeScript);
 hljs.registerLanguage('markdown', hljsMarkdown);
@@ -351,10 +354,10 @@ const partThreeExtensions = reactive([{ label: 'markdown', value: 'md', icon: 'l
 
 const fetchContent = async (name: string, extension: string) => {
   try {
-    const response = await fetch(`/${name}.${extension}`);
+    const response = await fetch(`${BASE_URL}${name}.${extension}`);
     if (!response.ok) {
       throw new Error(
-        `Failed to fetch /${name}.${extension}. Status: ${response.status}. StatusText: ${response.statusText}.`.replace(
+        `Failed to fetch ${BASE_URL}${name}.${extension}. Status: ${response.status}. StatusText: ${response.statusText}.`.replace(
           /\.+/g,
           '.',
         ),
@@ -363,13 +366,16 @@ const fetchContent = async (name: string, extension: string) => {
     return await response.text();
   } catch (error: any) {
     throw new Error(
-      `Failed to fetch /${name}.${extension}. Message: ${error.message}.`.replace(/\.+/g, '.'),
+      `Failed to fetch ${BASE_URL}${name}.${extension}. Message: ${error.message}.`.replace(
+        /\.+/g,
+        '.',
+      ),
     );
   }
 };
 
 const downloadContent = debounce((name: string, extension: string) => {
-  saveAs(`/${name}.${extension}`, `${name}.${extension}`);
+  saveAs(`${BASE_URL}${name}.${extension}`, `${name}.${extension}`);
 }, 500);
 
 const partOneContentQueries = useQueries(
