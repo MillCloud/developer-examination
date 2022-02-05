@@ -7,5 +7,4 @@ const objectToArray = (object: Record<string, string | number>): [string, string
 // 测试样例
 // const object = { a: 1, b: '2' };
 // const array = objectToArray(object);
-// console.log('object', object); // { a: 1, b: '2' }
 // console.log('array', array); // [['a', 1], ['b', '2']]

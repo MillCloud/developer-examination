@@ -10,5 +10,4 @@ const arrayToObject = (array: [string, string | number][]): Record<string, strin
 //   ['b', '2'],
 // ];
 // const object = arrayToObject(array);
-// console.log('array', array); // [['a', 1], ['b', '2']]
 // console.log('object', object); // { a: 1, b: '2' }
