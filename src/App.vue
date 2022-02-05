@@ -115,18 +115,19 @@
           <el-collapse v-else accordion>
             <el-collapse-item v-for="(nameItem, nameIndex) of partOneNames" :key="nameItem.value">
               <template #title>
-                <el-row align="middle" justify="center" class="w-full">
-                  <span>{{ nameItem.label }}</span>
-                  <div class="flex-auto" />
-                  <el-button
-                    v-for="extensionItem of partOneExtensions"
-                    :key="extensionItem.value"
-                    class="flex items-center justify-center"
-                    circle
-                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
-                  >
-                    <Icon :icon="extensionItem.icon" class="el-icon" />
-                  </el-button>
+                <el-row align="middle" class="w-full">
+                  <el-space>
+                    <el-button
+                      v-for="extensionItem of partOneExtensions"
+                      :key="extensionItem.value"
+                      class="flex items-center justify-center"
+                      circle
+                      @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                    >
+                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                    </el-button>
+                    <span>{{ nameItem.label }}</span>
+                  </el-space>
                 </el-row>
               </template>
               <el-tabs v-if="partOneExtensions.length > 1">
@@ -183,18 +184,19 @@
           <el-collapse v-else accordion>
             <el-collapse-item v-for="(nameItem, nameIndex) of partTwoNames" :key="nameItem.value">
               <template #title>
-                <el-row align="middle" justify="center" class="w-full">
-                  <span>{{ nameItem.label }}</span>
-                  <div class="flex-auto" />
-                  <el-button
-                    v-for="extensionItem of partTwoExtensions"
-                    :key="extensionItem.value"
-                    class="flex items-center justify-center"
-                    circle
-                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
-                  >
-                    <Icon :icon="extensionItem.icon" class="el-icon" />
-                  </el-button>
+                <el-row align="middle" class="w-full">
+                  <el-space>
+                    <el-button
+                      v-for="extensionItem of partTwoExtensions"
+                      :key="extensionItem.value"
+                      class="flex items-center justify-center"
+                      circle
+                      @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                    >
+                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                    </el-button>
+                    <span>{{ nameItem.label }}</span>
+                  </el-space>
                 </el-row>
               </template>
               <el-tabs v-if="partTwoExtensions.length > 1">
@@ -243,18 +245,19 @@
           <el-collapse v-else accordion>
             <el-collapse-item v-for="(nameItem, nameIndex) of partThreeNames" :key="nameItem.value">
               <template #title>
-                <el-row align="middle" justify="center" class="w-full">
-                  <span>{{ nameItem.label }}</span>
-                  <div class="flex-auto" />
-                  <el-button
-                    v-for="extensionItem of partThreeExtensions"
-                    :key="extensionItem.value"
-                    class="flex items-center justify-center"
-                    circle
-                    @click.stop="downloadContent(nameItem.value, extensionItem.value)"
-                  >
-                    <Icon :icon="extensionItem.icon" class="el-icon" />
-                  </el-button>
+                <el-row align="middle" class="w-full">
+                  <el-space>
+                    <el-button
+                      v-for="extensionItem of partThreeExtensions"
+                      :key="extensionItem.value"
+                      class="flex items-center justify-center"
+                      circle
+                      @click.stop="downloadContent(nameItem.value, extensionItem.value)"
+                    >
+                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                    </el-button>
+                    <span>{{ nameItem.label }}</span>
+                  </el-space>
                 </el-row>
               </template>
               <el-tabs v-if="partThreeExtensions.length > 1">
