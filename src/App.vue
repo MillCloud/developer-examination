@@ -349,6 +349,8 @@ const partThreeNames = reactive([
   { label: '渲染', value: 'render' },
   { label: '异常', value: 'exception' },
   { label: '优化', value: 'optimize' },
+  { label: '上传', value: 'upload' },
+  { label: '下载', value: 'download' },
 ]);
 const partThreeExtensions = reactive([{ label: 'markdown', value: 'md', icon: 'logos:markdown' }]);
 
