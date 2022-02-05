@@ -14,5 +14,6 @@ module.exports = {
   },
   hooks: {
     // 'before:init': 'pnpm install && pnpm run lint',
+    'after:git:release': 'git push origin main:release -f',
   },
 };
