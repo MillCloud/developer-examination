@@ -1,21 +1,37 @@
 {
-  "extends": "./node_modules/@modyqyw/fabric/tsconfig.base.json",
+  "extends": "@vue/tsconfig/tsconfig.web.json",
   "compilerOptions": {
-    "baseUrl": "./",
-    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client", "vite-plugin-pages/client-react"]
+    "types": [
+      "element-plus/global",
+      "element-pro-components",
+      "type-fest",
+      "unplugin-icons/types/vue",
+      "vite/client",
+      "vue/macros-global"
+    ]
   },
   "include": [
     "./**/.*.js",
+    "./**/.*.cjs",
+    "./**/.*.mjs",
     "./**/*.js",
+    "./**/*.cjs",
+    "./**/*.mjs",
     "./**/*.jsx",
     "./**/.*.ts",
+    "./**/.*.cts",
+    "./**/.*.mts",
     "./**/*.ts",
+    "./**/*.cts",
+    "./**/*.mts",
     "./**/*.tsx",
-    "./**/*.vue"
+    "./**/*.vue",
+    "./**/*.svelte"
   ],
   "exclude": [".cache", ".temp", ".tmp", "dist*", "node_modules"]
 }

@@ -4,7 +4,6 @@ name: git-pages
 on:
   push:
     branches: [release]
-  workflow_dispatch:
 
 jobs:
   docs:
