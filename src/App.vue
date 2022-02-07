@@ -28,7 +28,7 @@
           </el-space>
         </el-row>
       </el-header>
-      <el-main class="min-h-screen pt-[100px]">
+      <el-main class="min-h-screen pt-[120px]">
         <el-space direction="vertical" size="large" fill class="w-full">
           <h3 class="text-2xl font-medium">目的</h3>
           <p>
@@ -102,8 +102,8 @@
           <h3 class="text-2xl font-medium">题目</h3>
           <h4 class="text-xl font-medium">第一部分</h4>
           <p>
-            在第一部分，请使用<strong>原生 JavaScript / TypeScript 完成你会的题目</strong
-            >，完成的每一个题目对应一个文件提交。
+            在第一部分，请使用<strong>原生 JavaScript / TypeScript</strong>
+            完成<strong>你会的题目</strong>，完成的每一个题目对应一个文件提交。
           </p>
           <el-skeleton v-if="isLoadingPartOneContent" animated />
           <el-result
@@ -163,8 +163,9 @@
           </el-collapse>
           <h4 class="text-xl font-medium">第二部分</h4>
           <p>
-            在第二部分，请使用以下任意一个基本技术栈完成最少 1
-            个题目，完成每一个题目对应一个文件夹提交。
+            在第二部分，请使用<strong>以下任意一个基本技术栈</strong>完成<strong
+              >最少 1 个题目</strong
+            >，完成每一个题目对应一个文件夹提交。
           </p>
           <ul>
             <li><code>Vue 2 + Options API</code></li>
@@ -232,8 +233,8 @@
           </el-collapse>
           <h4 class="text-xl font-medium">第三部分</h4>
           <p>
-            在第三部分，请完成最少 1
-            个题目，形式可以是纯代码、纯文字或代码和文字结合，必须说明你能想到的任意细节，完成每一个题目对应一个文件夹提交。
+            在第三部分，请以<strong>代码、文字、图表或混合</strong>的形式完成最少 1
+            个题目，必须说明你能想到的任意<strong>细节</strong>，完成每一个题目对应一个文件夹提交。
           </p>
           <el-skeleton v-if="isLoadingPartThreeContent" animated />
           <el-result
