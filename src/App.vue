@@ -233,8 +233,9 @@
           </el-collapse>
           <h4 class="text-xl font-medium">第三部分</h4>
           <p>
-            在第三部分，请以<strong>代码、文字、图表或混合</strong>的形式完成最少 1
-            个题目，必须说明你能想到的任意<strong>细节</strong>，完成每一个题目对应一个文件夹提交。
+            在第三部分，请以<strong>代码、文字、图表或混合</strong>的形式完成
+            <strong>最少 1 个题目</strong>
+            ，必须说明你能想到的任意<strong>细节</strong>，完成每一个题目对应一个文件夹提交。
           </p>
           <el-skeleton v-if="isLoadingPartThreeContent" animated />
           <el-result
