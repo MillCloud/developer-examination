@@ -98,7 +98,6 @@
             </li>
             <li>使用到的周边库的官方文档</li>
           </ul>
-          <div class="my-4" />
           <h3 class="text-2xl font-medium">题目</h3>
           <h4 class="text-xl font-medium">第一部分</h4>
           <p>
@@ -124,7 +123,7 @@
                       circle
                       @click.stop="downloadContent(nameItem.value, extensionItem.value)"
                     >
-                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                      <v-icon :icon="extensionItem.icon" class="el-icon" />
                     </el-button>
                     <span>{{ nameItem.label }}</span>
                   </el-space>
@@ -136,7 +135,7 @@
                   :key="extensionItem.value"
                   :label="extensionItem.label"
                 >
-                  <markdown-it
+                  <v-markdown-it
                     breaks
                     xhtml-out
                     typographer
@@ -149,7 +148,7 @@
                   />
                 </el-tab-pane>
               </el-tabs>
-              <markdown-it
+              <v-markdown-it
                 v-else
                 breaks
                 xhtml-out
@@ -194,7 +193,7 @@
                       circle
                       @click.stop="downloadContent(nameItem.value, extensionItem.value)"
                     >
-                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                      <v-icon :icon="extensionItem.icon" class="el-icon" />
                     </el-button>
                     <span>{{ nameItem.label }}</span>
                   </el-space>
@@ -206,7 +205,7 @@
                   :key="extensionItem.value"
                   :label="extensionItem.label"
                 >
-                  <markdown-it
+                  <v-markdown-it
                     breaks
                     xhtml-out
                     typographer
@@ -219,7 +218,7 @@
                   />
                 </el-tab-pane>
               </el-tabs>
-              <markdown-it
+              <v-markdown-it
                 v-else
                 breaks
                 xhtml-out
@@ -233,8 +232,9 @@
           </el-collapse>
           <h4 class="text-xl font-medium">第三部分</h4>
           <p>
-            在第三部分，请以<strong>代码、文字、图表或混合</strong>的形式完成
-            <strong>最少 1 个题目</strong>
+            在第三部分，请以<strong>代码、文字、图表或混合</strong>的形式完成<strong
+              >最少 1 个题目</strong
+            >
             ，必须说明你能想到的任意<strong>细节</strong>，完成每一个题目对应一个文件夹提交。
           </p>
           <el-skeleton v-if="isLoadingPartThreeContent" animated />
@@ -256,7 +256,7 @@
                       circle
                       @click.stop="downloadContent(nameItem.value, extensionItem.value)"
                     >
-                      <Icon :icon="extensionItem.icon" class="el-icon" />
+                      <v-icon :icon="extensionItem.icon" class="el-icon" />
                     </el-button>
                     <span>{{ nameItem.label }}</span>
                   </el-space>
@@ -268,7 +268,7 @@
                   :key="extensionItem.value"
                   :label="extensionItem.label"
                 >
-                  <markdown-it
+                  <v-markdown-it
                     breaks
                     xhtml-out
                     typographer
@@ -282,7 +282,7 @@
                   />
                 </el-tab-pane>
               </el-tabs>
-              <markdown-it
+              <v-markdown-it
                 v-else
                 breaks
                 xhtml-out
@@ -308,14 +308,11 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import { useQueries } from 'vue-query';
 import { reactive, computed } from 'vue';
 import { saveAs } from 'file-saver';
-// @ts-ignore
-import MarkdownIt from 'vue3-markdown-it';
 import hljs from 'highlight.js';
-import { Icon } from '@iconify/vue';
 import hljsJavaScript from 'highlight.js/lib/languages/javascript';
 import hljsTypeScript from 'highlight.js/lib/languages/typescript';
 import hljsMarkdown from 'highlight.js/lib/languages/markdown';
-import { debounce } from '@modyqyw/utils';
+import { debounce } from 'lodash';
 
 // eslint-disable-next-line prefer-destructuring
 const BASE_URL = import.meta.env.BASE_URL;
