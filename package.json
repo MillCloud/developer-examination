@@ -44,7 +44,7 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@iconify/json": "^2.1.30",
-    "@modyqyw/fabric": "^5.0.1",
+    "@modyqyw/fabric": "^5.0.2",
     "@modyqyw/vite-plugin-eslint": "^1.2.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/line-clamp": "^0.3.1",
