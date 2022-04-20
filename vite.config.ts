@@ -1,29 +1,26 @@
-import path from 'path';
-// import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueDefineOptions from 'unplugin-vue-define-options/vite';
 import vueComponents from 'unplugin-vue-components/vite';
-import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
+import icons from 'unplugin-icons/vite';
 import env from 'vite-plugin-env-compatible';
-import eslint from 'vite-plugin-eslint';
+import eslint from '@modyqyw/vite-plugin-eslint';
 import stylelint from 'vite-plugin-stylelint';
 import compression from 'vite-plugin-compression';
-// import mkcert from 'vite-plugin-mkcert';
-import pkg from './package.json';
+import inspect from 'vite-plugin-inspect';
 
 export default defineConfig({
-  optimizeDeps: {
-    include: Object.keys(pkg.dependencies),
-  },
   plugins: [
     vue({
       reactivityTransform: true,
     }),
     vueJsx(),
+    vueDefineOptions(),
     vueComponents({
-      // dts: 'src/components.d.ts',
+      dts: false,
       resolvers: [iconsResolver()],
     }),
     icons({
@@ -40,22 +37,11 @@ export default defineConfig({
       fix: true,
     }),
     compression(),
-    // mkcert({
-    //   autoUpgrade: true,
-    //   source: 'coding',
-    // }),
+    inspect(),
   ],
   resolve: {
     alias: {
-      // '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@/': `${path.resolve('src')}/`,
+      '@': fileURLToPath(new URL('src', import.meta.url)),
     },
-  },
-  server: {
-    // https: {
-    //   // https://github.com/vitejs/vite/issues/4403
-    //   // @ts-ignore
-    //   maxSessionMemory: 128,
-    // },
   },
 });

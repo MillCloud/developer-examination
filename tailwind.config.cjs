@@ -1,32 +1,29 @@
-/* eslint-disable global-require */
 const color = require('color');
+const tailwindcssTypography = require('@tailwindcss/typography');
+const tailwindcssLineClamp = require('@tailwindcss/line-clamp');
+const tailwindcssAspectRatio = require('@tailwindcss/aspect-ratio');
 
-// Remember to update colors in ./src/styles/global.scss
+// Remember to update colors in ./src/styles/variables.scss
 // https://element-plus.gitee.io/zh-CN/component/color.html
 const colorMap = {
   primary: {
     base: '#409eff',
-    default: '#409eff',
     DEFAULT: '#409eff',
   },
   success: {
     base: '#67c23a',
-    default: '#67c23a',
     DEFAULT: '#67c23a',
   },
   warning: {
     base: '#e6a23c',
-    default: '#e6a23c',
     DEFAULT: '#e6a23c',
   },
   danger: {
     base: '#f56c6c',
-    default: '#f56c6c',
     DEFAULT: '#f56c6c',
   },
   info: {
     base: '#909399',
-    default: '#909399',
     DEFAULT: '#909399',
   },
   'primary-text': '#303133',
@@ -40,7 +37,7 @@ const colorMap = {
   bg: '#f5f7fa',
 };
 const types = ['primary', 'success', 'warning', 'danger', 'info'];
-types.forEach((type) => {
+for (const type of types) {
   for (let i = 1; i <= 9; i += 1) {
     colorMap[type][`lighten-${i}`] = color(colorMap[type].base)
       .mix(color('white'), i / 10)
@@ -49,7 +46,7 @@ types.forEach((type) => {
       .mix(color('black'), i / 10)
       .hex();
   }
-});
+}
 
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -64,13 +61,7 @@ module.exports = {
         xxl: '1600px',
       },
       colors: {
-        ...Object.entries(colorMap).reduce(
-          (acc, [key, value]) => ({
-            ...acc,
-            [key]: value,
-          }),
-          {},
-        ),
+        ...Object.fromEntries(Object.entries(colorMap).map(([key, value]) => [key, value])),
       },
       boxShadow: {
         base: '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)',
@@ -78,14 +69,8 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [tailwindcssTypography, tailwindcssLineClamp, tailwindcssAspectRatio],
   corePlugins: {
     preflight: false,
   },
 };
-/* eslint-enable global-require */
