@@ -65,7 +65,9 @@
                 中文官网
               </el-link>
               和
-              <el-link type="primary" href="https://vuejs.org/" target="_blank">英文官网</el-link>
+              <el-link type="primary" href="https://v2.vuejs.org/" target="_blank">
+                英文官网
+              </el-link>
             </li>
             <li>
               Vue 3
@@ -73,9 +75,7 @@
                 中文官网
               </el-link>
               和
-              <el-link type="primary" href="https://v3.vuejs.org/" target="_blank">
-                英文官网
-              </el-link>
+              <el-link type="primary" href="https://vuejs.org/" target="_blank"> 英文官网 </el-link>
             </li>
             <li>
               React
