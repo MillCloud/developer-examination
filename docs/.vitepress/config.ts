@@ -37,7 +37,6 @@ export default defineConfig({
           { text: '十六进制字符串字符求和', link: '/methods/string-sum' },
           { text: '去除字符串两边子串', link: '/methods/string-trim' },
           { text: '二维数组转换成对象', link: '/methods/array-to-object' },
-          { text: '对象转换成二维数组', link: '/methods/object-to-array' },
           { text: '生成唯一 ID', link: '/methods/unique-id' },
           { text: '数组去重', link: '/methods/array-de-duplication' },
           { text: '对象深拷贝', link: '/methods/object-deep-clone' },
