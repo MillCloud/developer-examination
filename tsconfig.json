@@ -1,19 +1,24 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": [
-      "element-plus/global",
-      "type-fest",
-      "unplugin-icons/types/vue",
-      "unplugin-vue-define-options",
-      "vite/client",
-      "vue/macros-global"
-    ]
+    "types": ["vite/client"]
   },
-  "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
+  "include": [
+    "**/.*.js",
+    "**/.*.cjs",
+    "**/.*.mjs",
+    "**/.*.ts",
+    "**/.*.cts",
+    "**/.*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.cts",
+    "**/*.mts",
+    "**/*.jsx",
+    "**/*.tsx",
+    "**/*.vue"
+  ],
+  "exclude": ["node_modules"]
 }
