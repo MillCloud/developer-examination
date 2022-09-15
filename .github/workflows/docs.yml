@@ -16,11 +16,11 @@ jobs:
           node-version: 16
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build:docs
+      - run: pnpm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: packages/docs/docs/.vitepress/dist
+          publish_dir: docs/.vitepress/dist
       - uses: wearerequired/git-mirror-action@v1
         with:
           source-repo: git@github.com:MillCloud/developer-examination.git
