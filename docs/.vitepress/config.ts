@@ -40,7 +40,6 @@ export default defineConfig({
           { text: '生成唯一 ID', link: '/methods/unique-id' },
           { text: '数组去重', link: '/methods/array-de-duplication' },
           { text: '对象深拷贝', link: '/methods/object-deep-clone' },
-          { text: '对象扁平化', link: '/methods/object-flatten' },
         ],
       },
       {
