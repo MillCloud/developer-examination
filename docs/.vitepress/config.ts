@@ -38,7 +38,6 @@ export default defineConfig({
           { text: '去除字符串两边子串', link: '/methods/string-trim' },
           { text: '二维数组转换成对象', link: '/methods/array-to-object' },
           { text: '生成唯一 ID', link: '/methods/unique-id' },
-          { text: '数组去重', link: '/methods/array-de-duplication' },
           { text: '对象深拷贝', link: '/methods/object-deep-clone' },
         ],
       },
