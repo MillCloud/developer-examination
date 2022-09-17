@@ -19,8 +19,8 @@ export default defineConfig({
     nav: [
       { text: '概述', link: '/overview' },
       { text: '方法', link: '/methods' },
-      { text: '项目', link: '/projects/' },
-      { text: '思想', link: '/thoughts/' },
+      { text: '项目', link: '/projects' },
+      { text: '思想', link: '/thoughts' },
     ],
     sidebar: [
       {
@@ -45,8 +45,8 @@ export default defineConfig({
         text: '项目',
         collapsible: true,
         items: [
+          { text: '说明', link: '/projects' },
           { text: 'fetch', link: '/projects/fetch' },
-          { text: 'EventBus', link: '/projects/event-bus' },
           { text: '备忘录', link: '/projects/memos' },
           { text: '扫雷', link: '/projects/mine-sweeper' },
           { text: '俄罗斯方块', link: '/projects/tetris' },
@@ -58,13 +58,13 @@ export default defineConfig({
         text: '思想',
         collapsible: true,
         items: [
+          { text: '说明', link: '/thoughts' },
           { text: '请求', link: '/thoughts/request' },
           { text: '渲染', link: '/thoughts/render' },
           { text: '异常', link: '/thoughts/exception' },
           { text: '优化', link: '/thoughts/optimization' },
           { text: '上传', link: '/thoughts/upload' },
           { text: '下载', link: '/thoughts/download' },
-          { text: '类型和数据', link: '/thoughts/types-and-data' },
         ],
       },
     ],
