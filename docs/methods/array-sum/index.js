@@ -3,3 +3,5 @@
  * @returns {number}
  */
 function arraySum(array) {}
+
+export { arraySum };

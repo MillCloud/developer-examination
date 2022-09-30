@@ -3,3 +3,5 @@
  * @returns {Record<string | number, any>}
  */
 function objectDeepClone(object) {}
+
+export { objectDeepClone };

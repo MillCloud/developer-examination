@@ -12,13 +12,15 @@ f 对应 15，e 对应 14，d 对应 13，C 对应 12，B 对应 11，A 对应 1
 15 + 14 + 13 + 12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0 = 120
 ```
 
-<a href="./string-sum.ts" download>点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="string-sum">点击下载 TypeScript 文件</a>
 
 ```typescript
 function stringSum(string: string): number {}
+
+export { stringSum };
 ```
 
-<a href="./string-sum.js" download>点击下载 JavaScript 文件</a>
+<a href="./index.js" download="string-sum">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
@@ -26,4 +28,6 @@ function stringSum(string: string): number {}
  * @returns {number}
  */
 function stringSum(string) {}
+
+export { stringSum };
 ```

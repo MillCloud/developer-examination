@@ -23,13 +23,15 @@
 输出：'_-abc-_--_'
 ```
 
-<a href="./string-trim.ts" download>点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="string-trim">点击下载 TypeScript 文件</a>
 
 ```typescript
 function stringTrim(string: string, substring = ' '): string {}
+
+export { stringTrim };
 ```
 
-<a href="./string-trim.js" download>点击下载 JavaScript 文件</a>
+<a href="./index.js" download="string-trim">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
@@ -38,4 +40,6 @@ function stringTrim(string: string, substring = ' '): string {}
  * @returns {string}
  */
 function stringTrim(string, substring = ' ') {}
+
+export { stringTrim };
 ```

@@ -3,3 +3,5 @@
  * @returns {any[]}
  */
 function arrayDeDuplication(array) {}
+
+export { arrayDeDuplication };

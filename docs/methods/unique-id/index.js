@@ -3,3 +3,5 @@
  * @returns {string}
  */
 function uniqueId(prefix = '') {}
+
+export { uniqueId };

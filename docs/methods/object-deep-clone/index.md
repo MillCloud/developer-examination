@@ -9,13 +9,15 @@
 输出：{ 1: 1, 2: 'a', 3: true, 4: undefined, 5: null, 6: { a: 'a' }, 7: [1, 2, 3] }
 ```
 
-<a href="./object-deep-clone.ts" download>点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="object-deep-clone">点击下载 TypeScript 文件</a>
 
 ```typescript
 function objectDeepClone<T = Record<string | number, any>>(object: T): T {}
+
+export { objectDeepClone };
 ```
 
-<a href="./object-deep-clone.js" download>点击下载 JavaScript 文件</a>
+<a href="./index.js" download="object-deep-clone">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
@@ -23,4 +25,6 @@ function objectDeepClone<T = Record<string | number, any>>(object: T): T {}
  * @returns {Record<string | number, any>}
  */
 function objectDeepClone(object) {}
+
+export { objectDeepClone };
 ```

@@ -18,13 +18,15 @@
 输出：2
 ```
 
-<a href="./unique-id.ts" download>点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="unique-id">点击下载 TypeScript 文件</a>
 
 ```typescript
 function uniqueId(prefix = ''): string {}
+
+export { uniqueId };
 ```
 
-<a href="./unique-id.js" download>点击下载 JavaScript 文件</a>
+<a href="./index.js" download="unique-id">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
@@ -32,4 +34,6 @@ function uniqueId(prefix = ''): string {}
  * @returns {string}
  */
 function uniqueId(prefix = '') {}
+
+export { uniqueId };
 ```

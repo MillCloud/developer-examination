@@ -4,3 +4,5 @@
  * @returns {string}
  */
 function stringTrim(string, substring = ' ') {}
+
+export { stringTrim };

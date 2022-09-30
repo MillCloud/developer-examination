@@ -9,13 +9,15 @@
 输出：{ 1: 2, 3: 4 }
 ```
 
-<a href="./array-to-object.ts" download>点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="array-to-object">点击下载 TypeScript 文件</a>
 
 ```typescript
 function arrayToObject(array: [string | number, any][]): Record<string | number, any> {}
+
+export { arrayToObject };
 ```
 
-<a href="./array-to-object.js" download>点击下载 JavaScript 文件</a>
+<a href="./index.js" download="array-to-object">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
@@ -23,4 +25,6 @@ function arrayToObject(array: [string | number, any][]): Record<string | number,
  * @returns {Record<string | number, any>}
  */
 function arrayToObject(array) {}
+
+export { arrayToObject };
 ```

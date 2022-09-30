@@ -18,9 +18,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '概述', link: '/overview' },
-      { text: '方法', link: '/methods' },
-      { text: '项目', link: '/projects' },
-      { text: '思想', link: '/thoughts' },
+      { text: '方法', link: '/methods/' },
+      { text: '项目', link: '/projects/' },
+      { text: '思想', link: '/thoughts/' },
     ],
     sidebar: [
       {
@@ -32,20 +32,20 @@ export default defineConfig({
         text: '方法',
         collapsible: true,
         items: [
-          { text: '说明', link: '/methods' },
-          { text: '数组元素求和', link: '/methods/array-sum' },
-          { text: '十六进制字符串字符求和', link: '/methods/string-sum' },
-          { text: '去除字符串两边子串', link: '/methods/string-trim' },
-          { text: '二维数组转换成对象', link: '/methods/array-to-object' },
-          { text: '生成唯一 ID', link: '/methods/unique-id' },
-          { text: '对象深拷贝', link: '/methods/object-deep-clone' },
+          { text: '说明', link: '/methods/' },
+          { text: '数组元素求和', link: '/methods/array-sum/' },
+          { text: '十六进制字符串字符求和', link: '/methods/string-sum/' },
+          { text: '去除字符串两边子串', link: '/methods/string-trim/' },
+          { text: '二维数组转换成对象', link: '/methods/array-to-object/' },
+          { text: '生成唯一 ID', link: '/methods/unique-id/' },
+          { text: '对象深拷贝', link: '/methods/object-deep-clone/' },
         ],
       },
       {
         text: '项目',
         collapsible: true,
         items: [
-          { text: '说明', link: '/projects' },
+          { text: '说明', link: '/projects/' },
           { text: 'fetch', link: '/projects/fetch' },
           { text: '备忘录', link: '/projects/memos' },
           { text: '扫雷', link: '/projects/mine-sweeper' },
@@ -58,7 +58,7 @@ export default defineConfig({
         text: '思想',
         collapsible: true,
         items: [
-          { text: '说明', link: '/thoughts' },
+          { text: '说明', link: '/thoughts/' },
           { text: '请求', link: '/thoughts/request' },
           { text: '渲染', link: '/thoughts/render' },
           { text: '异常', link: '/thoughts/exception' },
