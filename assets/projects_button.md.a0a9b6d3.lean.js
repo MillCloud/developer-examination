@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as c,a as d}from"./app.63741f9c.js";const h=JSON.parse('{"title":"\u6309\u94AE","description":"","frontmatter":{},"headers":[],"relativePath":"projects/button.md","lastUpdated":1664515243000}'),t={name:"projects/button.md"},a=d("",2),r=[a];function l(s,i,n,_,p,u){return c(),o("div",null,r)}const m=e(t,[["render",l]]);export{h as __pageData,m as default};

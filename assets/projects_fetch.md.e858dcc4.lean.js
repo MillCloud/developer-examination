@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,a}from"./app.63741f9c.js";const u=JSON.parse('{"title":"fetch","description":"","frontmatter":{},"headers":[],"relativePath":"projects/fetch.md","lastUpdated":1665210278000}'),o={name:"projects/fetch.md"},c=a("",2),i=[c];function l(s,h,n,d,_,f){return r(),t("div",null,i)}const g=e(o,[["render",l]]);export{u as __pageData,g as default};
