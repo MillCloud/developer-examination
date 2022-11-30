@@ -9,4 +9,4 @@
   - 第三列显示 `Fork` 数。
 - 显示当前页和总页数，允许切页查看不同页数据。
 - 缓存最近 5 页的数据。
-- 可以参考 [axios](https://github.com/axios/axios) 或 [ky](https://github.com/sindresorhus/ky) 的源码。
+- 可以参考 [axios](https://github.com/axios/axios)、[ky](https://github.com/sindresorhus/ky)、[@tanstack/query](https://github.com/tanstack/query) 的源码。
