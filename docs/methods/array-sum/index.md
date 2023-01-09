@@ -10,7 +10,7 @@
 解释：1 + 2 + 3 + 4 + 5 = 15
 ```
 
-<a href="./index.ts" download="array-sum">点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="array-sum.ts">点击下载 TypeScript 文件</a>
 
 ```typescript
 function arraySum(array: number[]): number {}
@@ -18,7 +18,7 @@ function arraySum(array: number[]): number {}
 export { arraySum };
 ```
 
-<a href="./index.js" download="array-sum">点击下载 JavaScript 文件</a>
+<a href="./index.js" download="array-sum.js">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**

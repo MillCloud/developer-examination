@@ -9,7 +9,7 @@
 输出：[1, 2, undefined, null, true, false, '', 'a', 'abc']
 ```
 
-<a href="./index.ts" download="array-de-duplication">点击下载 TypeScript 文件</a>
+<a href="./index.ts" download="array-de-duplication.ts">点击下载 TypeScript 文件</a>
 
 ```typescript
 function arrayDeDuplication(array: any[]) {}
@@ -17,7 +17,7 @@ function arrayDeDuplication(array: any[]) {}
 export { arrayDeDuplication };
 ```
 
-<a href="./index.js" download="array-de-duplication">点击下载 JavaScript 文件</a>
+<a href="./index.js" download="array-de-duplication.js">点击下载 JavaScript 文件</a>
 
 ```javascript
 /**
