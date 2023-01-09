@@ -1,6 +1,10 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "@tsconfig/node18",
   "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["DOM", "ESNext"],
+    "target": "ESNext",
+    "resolveJsonModule": true,
     "types": ["vite/client"]
   },
   "include": [
@@ -16,9 +20,7 @@
     "**/*.ts",
     "**/*.cts",
     "**/*.mts",
-    "**/*.jsx",
-    "**/*.tsx",
-    "**/*.vue"
+    "docs/.vitepress/*.ts"
   ],
   "exclude": ["node_modules"]
 }
